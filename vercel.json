@@ -7,7 +7,7 @@
   },
   "routes": [
     {
-      "src": "/(css|js|image|favicon.ico)/(galeria|template)/(.*)",
+      "src": "/(css|js|image|favicon.ico)/(.*)/(.*)",
       "dest": "/api/assets.php?type=$1&parent=$2&file=$3"
     },
     {
