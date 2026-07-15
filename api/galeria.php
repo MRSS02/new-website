@@ -2,23 +2,20 @@
 <html lang="pt-BR">
     
 <head>
-<?php  include('/var/task/user/api/snippets/header.html');?>
+<?php  include __DIR__ . '/snippets/header.html';?>
 </head>
 
 <body>
     <!-- Barra de Navegação -->
-    <?php include('/var/task/user/api/snippets/navegacao.html'); ?>
+    <?php include __DIR__ . '/snippets/navegacao.html'; ?>
     
     <!-- Sessão da Galeria -->
-    <?php include('/var/task/user/api/snippets/galeria.html'); ?>
-
-     <!-- Sessão dos Patrocinadores -->
-    <?php include('/var/task/user/api/snippets/patrocinadores.html'); ?>
+    <?php include __DIR__ . '/snippets/galeria.html'; ?>
 
     <!-- Footer -->
-    <?php include('/var/task/user/api/snippets/rodape.html'); ?>
+    <?php include __DIR__ . '/snippets/rodape.html'; ?>
 
     <!-- Chamada dos Scripts -->
-    <?php include('/var/task/user/api/snippets/scripts.html'); ?>
+    <?php include __DIR__ . '/snippets/scripts.html'; ?>
 </body>
 </html>
