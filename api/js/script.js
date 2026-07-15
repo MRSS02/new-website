@@ -31,9 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('modalInscricao');
     const span = document.querySelector('.close');
     
-    span.addEventListener('click', function () {
-      modal.style.display = 'none';
+    if (span !== null ) {
+		span.addEventListener('click', function () {
+		modal.style.display = 'none';
     });
+	}
     
     window.addEventListener('click', function (event) {
       if (event.target === modal) {
