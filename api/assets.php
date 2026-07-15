@@ -13,8 +13,8 @@ if ($_GET['type'] === 'css') {
 } else if ($_GET['type'] === 'image') {
     $my_file = $_GET['file'];
     $file_type = substr(strrchr(basename($my_file), '.'), 1);    
-    header("Content-Type: image/{$file_type}");
     $parent = $_GET['parent'] ?? '';
+    header("Content-Type: image/{$file_type}");
     echo require __DIR__ . '/image/' . $parent . '/' . basename($my_file);
 }
 
