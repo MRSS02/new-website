@@ -7,7 +7,7 @@
 
 <body>
     <!-- Barra de Navegação -->
-    <?php include __DIR__ . '/snippets/navegacao.html'; ?>
+    <?php include __DIR__ . '/snippets/navegacao-galeria.html'; ?>
     
     <!-- Sessão da Galeria -->
     <?php include __DIR__ . '/snippets/galeria.html'; ?>

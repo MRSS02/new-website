@@ -17,6 +17,7 @@ if ($_GET['type'] === 'css') {
 	if ($parent === 'image') {
 		$parent = '';
 	}
+	echo require __DIR__ . '/image/' . basename($_GET['file']);
     echo require __DIR__ . '/image/' . $parent . basename($_GET['file']);
 }
 
