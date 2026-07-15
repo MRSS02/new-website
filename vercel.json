@@ -7,14 +7,14 @@
   },
   "routes": [
     {
-      "src": "/(image)/(galeria)/(.*)",
+      "src": "/(image|whatever)/(.*)/(.*)",
       "dest": "/api/assets.php?type=$1&parent=$2&file=$3"
     },
     {
       "src": "/(css|js|image|favicon.ico)/(.*)",
       "dest": "/api/assets.php?type=$1&file=$2"
     },
-    { "src": "/galeria.php",  "dest": "/api/galeria.php" },
+    { "src": "/galeria",  "dest": "/api/galeria.php" },
     { "src": "/(.*)",  "dest": "/api/index.php" }
   ]
 }
