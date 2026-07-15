@@ -10,6 +10,10 @@
       "src": "/(css|js|image|favicon.ico)/(.*)",
       "dest": "/api/assets.php?type=$1&file=$2"
     },
+	{
+      "src": "/(css|js|image|favicon.ico)/(.*)/(.*)",
+      "dest": "/api/assets.php?type=$1&file=$3&parent=$2"
+    },
     { "src": "/galeria.php",  "dest": "/api/galeria.php" },
     { "src": "/(.*)",  "dest": "/api/index.php" }
   ]
