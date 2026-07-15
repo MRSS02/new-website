@@ -1,0 +1,163 @@
+/* --- Seção Geral de Palestrantes e Moderadores --- */
+.palestrantes-section {
+  padding: 50px;
+}
+
+
+/* Protege os containers principais, removendo overflow: visible !important */
+.palestrantes-content,
+.moderador-content {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Importante para que os cards em uma linha tenham a mesma altura */
+  justify-content: space-between;
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* --- Estilo para Listas de Palestrantes e Moderadores --- */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px;
+  justify-content: center;
+  margin: 10px auto;
+  padding: 0;
+  list-style: none;
+  align-items: flex-start;
+}
+
+
+.mobile-titule {
+  color: #333;
+}
+
+
+/* --- Estilo para Itens Individuais (Palestrante/Moderador) --- */
+.palestrantes-item,
+.moderador-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  /* Manter flex-basis para controle de largura */
+  /*flex: 1 1 calc(33.33% - 30px);*/ /* Ajuste conforme necessário para 3 colunas */
+  flex-basis: calc(33.33% - 30px); /* Controla a largura inicial /
+    */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  background-color: #f8f9fa;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0px 40px 0px 40px;
+}
+
+/*Configurações da imagem dos  palestrantes*/
+.palestrantes-content .menu-image,
+.moderador-content .menu-image {
+  max-width: 60%;
+  width: 80%;
+  margin: 0 auto 15px auto;
+  object-fit: cover;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+/*Nome do palestrante*/
+.palestrantes-content .name,
+.moderador-content .name {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+  font-family: "FinalSix";
+}
+
+/* Mantenha o estilo para o parágrafo de texto curto inicial */
+.palestrantes-content .card-text,
+.moderador-content .card-text {
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /*text-overflow: ellipsis; /* Adiciona '...' se o texto for cortado */
+}
+
+/* --- ESTILO PARA O COLLAPSE (ESSENCIAL PARA A CORREÇÃO) --- */
+.collapse {
+  max-height: 0; /* Começa com altura zero */
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.4s ease-out; /* Transição suave */
+  opacity: 0; /* Oculta o conteúdo */
+  padding-top: 0; /* Garante que não haja padding quando fechado */
+  padding-bottom: 0; /* Garante que não haja padding quando fechado */
+}
+
+.collapse.show {
+  max-height: 1000px; /* Um valor grande o suficiente para qualquer biografia. Ajuste se necessário. */
+  opacity: 1; /* Torna o conteúdo visível */
+  padding-top: 10px; /* Adiciona padding quando expandido, se desejar */
+  padding-bottom: 10px; /* Adiciona padding quando expandido, se desejar */
+  transition: max-height 0.5s ease-in, opacity 0.4s ease-in;
+}
+
+.palestrantes-content .collapse p,
+.moderador-content .collapse p {
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+/* Opcional: Animação de fade-in para o conteúdo quando ele aparece */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* O botão deve ter a classe 'toggle-btn' no HTML */
+.toggle-btn {
+  margin-top: auto; /* Empurra o botão para a parte inferior do card */
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease-out;
+  align-self: center; /* Centraliza o botão */
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  background: #1E88DC;
+}
+
+.toggle-btn.active{
+  background: #D77F00;
+  transition: background-color 0.4s ease-out;
+
+}
+
+.toggle-btn:hover {
+  background: #D77F00;
+  color: white;
+  transition: background-color 0.4s ease-in;
+}
+ 
+ 
+.toggle-btn.active:hover{
+  color: #fff;
+  background: #1E88DC;
+  transition: background-color 0.4s ease-in;
+
+}

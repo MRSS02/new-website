@@ -1,0 +1,250 @@
+/*Importacao de css para main*/
+@import url("../css/navegacao.css");
+@import url("../css/banner.css");
+@import url("../css/patrocinadores.css");
+@import url("../css/rodape.css");
+@import url("../css/programacao.css");
+@import url("../css/about.css");
+@import url("../css/palestrantes.css");
+@import url("../css/galeria.css");
+@import url("../css/download.css");
+@import url("../css/windows.css");
+@import url("../css/botao-flutuante.css");
+@import url("../css/responsivo.css");
+@import url("../css/modal.css");
+@import url("../css/edicoes-anteriores.css");
+
+/*--------------------------------------*/
+
+/*Configuracoes root realizadas por Vinicios e COSINF*/
+
+:root {
+  /* Font Sizes */
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.75rem;
+  --h4-font-size: 1.5rem;
+  --h5-font-size: 1rem;
+  --h6-font-size: 1rem;
+  --li-font-size: 1rem;
+
+  /* Colors */
+  --white: #f0f0f0;
+  --color-01: #608ac7b0;
+  --color-02: #5c6bb2c0;
+  --color-03: #e6a9a5;
+  --color-04: #c1da6dc0;
+  --color-05-contrast: #174773  ;
+  --color-06-contrast: #00acff;
+  --color-07-contrast: #cc068ad0;
+  --color-08-contrast: #d52727e0;
+  --main-text-dark-color: #626677;
+  --main-text-background-color: #dde4ff;
+
+  /* Gradients */
+  --gradient-01: linear-gradient(135deg, var(--color-01), var(--color-02));
+  --gradient-02: linear-gradient(135deg, var(--color-03), var(--color-04));
+  --gradient-03: linear-gradient(45deg, var(--color-02), var(--color-04));
+  --gradient-04: linear-gradient(
+    45deg,
+    var(--color-05-contrast),
+    var(--color-06-contrast)
+  );
+  --gradient-05: linear-gradient(
+    135deg,
+    var(--color-07-contrast),
+    var(--color-08-contrast)
+  );
+  --gradient-06: linear-gradient(135deg, var(--color-04), var(--color-03));
+
+  --gradient-07: linear-gradient(135deg, var(--color-01), var(--color-03));
+
+  /* Layout */
+  --grid-gap: 2rem;
+  --container-padding: 1rem 0rem 1rem 0rem;
+}
+
+/*--------------------------------------*/
+
+/*DefiniÃ§Ãµes padrÃ£o para h1,h2,h3...*/
+
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: 500;
+  line-height: 1.2;
+}
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  line-height: 1.2;
+}
+h3 {
+  font-size: var(--h3-font-size);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+  font-family: "FinalSix", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+h5 {
+  font-size: var(--h5-font-size);
+  font-family: "FinalSix", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+h6 {
+  font-size: var(--h6-font-size);
+  font-weight: 500;
+  line-height: 1.2;
+}
+li {
+  font-size: var(--li-font-size);
+}
+p {
+  font-size: 1.2rem;
+  color: #212529;
+  margin-bottom: 1rem;
+}
+
+/*--------------------------------------*/
+
+/*ConfiguraÃ§Ãµes para h1,h2,h3 em grid-container*/
+
+.grid-container h1 {
+  font-size: calc(var(--h1-font-size) - 3pt);
+}
+.grid-container h2 {
+  font-size: calc(var(--h2-font-size) - 3pt);
+}
+.grid-container h3 {
+  font-size: calc(var(--h3-font-size) - 3pt);
+}
+/* .grid-container h4 {
+  font-size: calc(var(--h4-font-size) - 3pt);
+} */
+.grid-container h5 {
+  font-size: calc(var(--h5-font-size) - 3pt);
+  margin-bottom: 0.2rem;
+}
+.grid-container h6 {
+  font-size: calc(var(--h6-font-size) - 3pt);
+}
+.grid-container li {
+  font-size: calc(var(--li-font-size) - 3pt);
+}
+
+.duas-colunas {
+  column-count: 2;
+  column-gap: 2rem;
+}
+
+.one-collumn{
+  column-count: 1 !important;
+}
+
+.no-break {
+  break-inside: avoid;
+}
+
+.btn, .toggle-btn, .toggle-btn:hover, .btn:hover {
+  transition: 0.5s cubic-bezier(0,.2,.15,.85) !important;
+}
+
+/*------------------------------*/
+
+/*ConfiguraÃ§Ãµes do corpo do site*/
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo base para linhas de tabela (tr) */
+tr {
+  background-color: #f9f9f9; /* Cor de fundo */
+  color: var(--main-text-dark-color);
+  /* Cor do texto */
+  font-size: 1rem; /* Tamanho da fonte */
+  font-family: Arial, sans-serif; /* FamÃ­lia da fonte */
+  font-weight: 400; /* Peso da fonte */
+  line-height: 1.5; /* Altura da linha */
+}
+
+/*------------------------------*/
+
+/*SeleÃ§Ã£o de fonts realizadas por Vinicius*/
+.sofia-sans-condensed {
+  font-family: "Sofia Sans Condensed", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+/*------------------------------*/
+
+/*Deixa Listas e Links sem . e ____*/
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*------------------------------*/
+
+/*ConfiguraÃ§Ãµes da tag botÃµes*/
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/*------------------------------*/
+
+/*ConfiguraÃ§Ã£o do Conteiner PadrÃ£o para todo Site*/
+.section-content {
+  margin: 0 auto;
+  max-width: 1350px;
+  padding: 1% 0%;
+}
+
+/*------------------------------*/
+
+/*ConfiguraÃ§Ã£o para titulos de sections*/
+
+.section-title {
+  text-align: center;
+  margin: 40px 40px;
+  font-size: 2em;
+  color: #333;
+  padding: 15px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 5px;
+  margin: 10px auto;
+  border-radius: var(--border-radius-s);
+}
+
+/*------------------------------*/

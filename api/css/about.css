@@ -1,0 +1,98 @@
+/*---------------------------------------------------------------------------Section O EVENTO----------------------------------------------------------------------------------*/
+
+/*Configurações de lagura,tamanho,formatação de texto na section O EVENTO*/
+
+.text-descricao {
+	padding-bottom: 24px;
+}
+
+.about-section {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.about-section .section-content {
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/*---------------------------------------------------------------------*/
+
+/*Configurações O EVENTO container de Video/Imagem*/
+
+/*Container inicial para Background do container*/
+
+.janela {
+  width: 400px;
+  height: 400px;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+/*Estrutura principal do O EVENTO(Container com Imagem/Video e Conatiner com Conteudo)*/
+
+/*Estrutura do container para elemento de imagem ou video*/
+
+.video-container {
+  border-radius: 8px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Configurações do elemento dentro do container, no momento sendo utilizado uma Imagem*/
+
+.video-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 25% 50%;
+  display: block;
+}
+
+/*Estrutura do container para Conteudo*/
+
+.about-section .text-content {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+/*Configurações de Conteudo presente no container*/
+
+.about-section .text-content .text {
+  font-size: var(--font-size-m);
+  line-height: 30px;
+  color: var(--text-color);
+  margin: 50px 0 30px;
+  font-size: var(--font-size-m);
+}
+
+/*Configurações do h5 para o container text-content*/
+
+.text-content h5 {
+  font-weight: 500;
+  line-height: 19.2px;
+  color: #212529;
+}
+
+/* quebra de coluna em creditos.html */
+.break-column {
+  height: 10px; /* Força o item a ocupar toda a linha (quebra) */
+}
+
+/*---------------------------------------------------------------------*/
+
+

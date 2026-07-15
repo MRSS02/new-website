@@ -1,0 +1,52 @@
+/*CSS realizadas por vinicius*/
+.grid-container {
+  gap: var(--grid-gap);
+  max-width: 1320px;
+  margin: 0rem 0rem 0rem 0rem;
+  padding: var(--container-padding);
+  display: flex; 
+  align-items: flex-start;
+}
+
+
+.grid-container-left {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--grid-gap);
+  max-width: 1320px;
+  margin: 0rem 0rem 2rem 0rem;
+  padding: var(--container-padding);
+}
+
+.text-content {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+.expo-content {
+  display: flex;
+  padding: 0rem 1rem 0rem 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  flex-direction: column;
+}
+
+.text-content-left {
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.text-content h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "FinalSix", Arial, Helvetica, sans-serif;
+  color: #212529;
+}
+
+.text-content ul {
+  margin-bottom: 1rem;
+}
+
+
+

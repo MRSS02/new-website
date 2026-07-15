@@ -1,0 +1,261 @@
+/*Configurações de largura, tamanho, formatação na section Navbar*/
+
+header {
+  /*background: linear-gradient(
+    to left top,
+    rgba(30, 30, 30, 0.25),
+    rgba(10, 10, 10, 0.25)
+  ); */
+  width: 100vw;
+  max-width: 100%;
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  max-height: 84px;
+  height: 84px;
+  background-color: transparent;
+}
+
+
+
+header::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 84px;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+#bg-navbar {
+	opacity: 1;
+	height: 84px;
+	top: -84px;
+	transition: top 0.25s ease-out;
+	background: linear-gradient(to bottom, #5A5A5AD0, #FFFFFF30);
+}
+
+#bg-navbar:before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 84px;
+  left: 0;
+  backdrop-filter: blur(8px) contrast(0.8) brightness(0.8) saturate(1.3);
+  z-index: -1;
+}
+
+#bg-navbar.navbar-scrolled {
+	opacity: 1;
+	top: 0;
+	transition: top 0.6s cubic-bezier(0.16, 0.24, 0.16, 0.94), background 0.3s cubic-bezier(0.16, 0.24, 0.16, 0.94);
+}
+
+#navbar-header.navbar-scrolled{
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5) !important;
+  transition: box-shadow 0.25s ease-out;
+  transition-delay: 0.56s;
+}
+
+/* #navbar-header.navbar-color{
+  box-shadow: 0 8px 8px (255, 255, 255, 0.5) !important;
+} */
+
+#bg-navbar.navbar-color {
+	background: linear-gradient(to bottom, #308ef0d0, #1a92c820); 
+	transition: all 0.3s cubic-bezier(0.16, 0.24, 0.16, 0.94);
+	transition-delay: 0.2s;
+}
+
+.navbar {
+	max-height: 84px;
+	height: 84px;
+}
+.navbar a {
+	cursor: pointer;
+}
+
+.bg-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover; /* equivalente ao background-size: cover */
+  z-index: -1;
+}
+/*-----------------------------------------------------------------------*/
+
+/*Configuração da navbar*/
+
+#nav-logo {
+	opacity: 0;
+	cursor: none;
+}
+
+#nav-logo.not-hidden {
+	transition: opacity 0.32s ease-in;
+	opacity: 1;
+	transition-delay: 0.32s;
+	cursor: pointer;
+	pointer-events: auto;
+}
+
+#nav-logo.hidden {
+	transition: opacity 0.2s ease-out;
+	opacity: 0;
+	cursor: default;
+	pointer-events: none;
+}
+
+header .section-content {
+	max-width: 1450px;
+	padding-top: 0;
+	padding-bottom: 0;
+	
+}
+
+header .navbar {
+  font-family: Arial, sans-serif;
+  max-height: 84px;
+  box-shadow: none;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+
+/*Configuração da botões presentes na navbar*/
+.navbar .nav-menu {
+  display: flex;
+  gap: 12px;
+  text-align: center;
+}
+
+.nav-item a{
+  font-size: 0.9rem !important;
+}
+
+.navbar h2 {
+  font-size: 1.6rem;
+}
+
+/*Configurações dos links do menu*/
+.navbar .nav-link,.navbar .nav-link-ext {
+  transition: 0.5s cubic-bezier(0,.2,.15,.85);
+  padding: 10px 10px;
+  border-radius: 5px;
+  color: var(--white) !important;
+  font-weight: 400;
+  text-align: center;
+}
+
+.nav-link.active,
+.nav-link-alt.active {
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.2s ease-in;
+  background: var(--color-03);
+  box-shadow: inset 2px 2px 5px 2px hsl(0deg 0% 9% / 35%);
+  color: var(--white) !important;
+}
+
+.nav-link:hover,.nav-link-ext:hover {
+  transition: 0.3s ease-in;
+  background: var(--color-03);;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 9%, 0.3);
+  color: var(--white) !important;
+}
+
+.nav-link.active:hover, .nav-link-ext:hover{
+  transition: 0.3s ease-in;
+  /* font-weight: bold; */
+  background: var(--color-03);
+  box-shadow: 2px 2px 5px 2px hsl(0deg 0% 9% / 20%);
+}
+
+/*Configurações da logo*/
+
+.nav-logo {
+  margin: 0;
+  text-align: center;
+  padding-top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  justify-content: center;
+  align-self: center;
+  gap: 25px;
+}
+
+.nav-logo img {
+  width: 120px;
+  height: auto;
+  transform: scale(0.82);
+
+}
+
+.logo-svg {
+  width: 20rem;
+}
+
+/*Logo na versão do Menu mobile*/
+
+.nav-logo-sidebar {
+  display: none !important;
+  width: 17rem;
+}
+
+/* Icons desativados em resoluções maiores */
+.navbar #menu-fechar-button,
+#menu-abrir-button {
+  display: none;
+  color: white;
+}
+
+/*Configurações de textos da navbar*/
+
+.navbar .nav-logo .logo-text,
+.navbar .nav-logo .logo-subtext {
+  color: #fff;
+}
+
+.navbar .logo-text {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.navbar .logo-subtext {
+  font-weight: lighter;
+  font-size: 1.1rem;
+  translate: 0 0.65rem;
+}
+
+/*Botão de Inscrições*/
+
+.navbar .subscribe, .navbar .subscribe.active {
+  font-weight: 600;
+  background: #F00020;
+  color: white;
+}
+.subscribe:hover {
+  transition: 0.5s cubic-bezier(0,.2,.15,.85);
+  background: #c00303;
+}
+
+.subscribe {
+  color: white !important;
+  transition: 0.3s ease-in;
+}
+
+
+/*
+  Accessibility: Ensure color contrast is sufficient for readability.
+  Consider using a contrast checker for your color palette.
+*/

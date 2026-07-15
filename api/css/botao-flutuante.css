@@ -1,0 +1,257 @@
+/*Configurações do Icone(Localização na Tela), configuração de trasition de Home para Rolagem*/
+.popout {
+  position: fixed;
+  top: calc(100vh - 84px);
+  right: -130px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+/*Configuração do Botão(Tamanho,cor,detalhes, etc)*/
+.popout .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 32px;
+  z-index: 999;
+  background: var(--gradient-07);
+  color: #00a3dd;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  transition: 0.2s opacity ease-in-out, 0.2s transform, 0.2s box-shadow;
+}
+
+.popout .btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px 0 rgb(179 211 81 / 46%), 0 0 0 4px rgb(185 213 77 / 0%);
+  filter: brightness(1.08);
+}
+
+/*Configurações do Botão ativo*/
+.popout .btn.active {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/*Configurações do Botão ativo*/
+.popout .btn:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  content: "";
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-02);
+  z-index: -2;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.popout .btn:active:after {
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  opacity: 0;
+}
+
+/*Configuração do Painel de conteudo(Tamanho,cor,detalhes, etc)*/
+.popout .panel {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  bottom: 90px;
+  right: 48px;
+  width: 440px;
+  text-align: left;
+  overflow: hidden;
+  visibility: hidden;
+  /* transform: scale(1); */
+  transform: translateX(30%) translateY(82%) scale(1);
+  transform-origin: 100% 100%;
+  transition: all 0.2s;
+  opacity: 0;
+}
+
+/* Botão de fechar no canto superior direito do painel */
+.popout .panel-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popout .panel-close svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.popout .panel-close:focus {
+  outline: 2px solid #e53935;
+}
+
+/*Configuraçõs quando painel estiver ativo*/
+.popout .panel.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-30%) translateY(0%) scale(0.7);
+  transition: transform 0.2s, opacity 0.2s, visibility 0s 0s;
+}
+
+/*Versão ativo panel para banner*/
+
+.popout-repositioned .btn::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 80px;
+}
+
+.popout.popout-repositioned .panel.active {
+  transform: translateX(30%) translateY(82%) scale(0.8);
+}
+
+.popout .panel-repositioned.active {
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(80%);
+  transition: transform 0.2s, visibility 0s 0s, opacity 0.2s;
+}
+
+.popout-repositioned .btn::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 80px;
+}
+
+/*Sessão principal de conteudo do elemento*/
+.popout .panel-header {
+  padding: 1rem;
+  font-size: 1.5rem;
+  background: var(--gradient-02);
+  font-weight: 300;
+  color: #3c3c3c;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.img-panel {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/*Sessão segundaria de conteudo do elemento*/
+.popout .panel-body {
+  padding: 1.5rem 2rem;
+  background: var(--main-text-background-color);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  font-size: 1.3rem;
+  text-align: center;
+  color: var(--main-text-dark-color);
+}
+
+/*Botão desabilitado durante a animação de fade*/
+.popout-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*Versão do icon presente na home(Configurações de tamanho e posição aqui!)*/
+.popout-repositioned {
+  position: relative;
+  left: -9%;
+  top: 0%;
+  right: unset;
+  align-items: flex-start;
+  display: flex;
+  gap: 15px;
+  scale: 0.75;
+  transition: transform 0.2s;
+}
+
+.popout-repositioned:hover {
+  transform: translateX(0%) scale(1.01);
+}
+
+/*Versão do botão presente na home(Configurações de tamanho e posição aqui!)*/
+.popout-repositioned .btn {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  background: var(--gradient-07);
+  box-shadow: 2px 2px 5px hsla(0, 0%, 9%, 0.3);
+}
+
+.sponsor {
+  a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-top: 30px;
+  }
+}
+.chamada {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 60%;
+  left: 18%;
+  /* transform: translateX(32%); */
+}
+
+/*Texto do lado do popout*/
+.assinatura-botao {
+  margin-left: 0.75rem;
+  color: #fff;
+  align-self: center;
+  transition: opacity 0.2s;
+}
+.assinatura-botao.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*Texto do em cima do popout*/
+
+.integracao-text {
+  max-width: 100%;
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+  position: relative;
+  left: 0%;
+  top: 0%;
+  font-family: "FinalSix", Arial, Helvetica, sans-serif;
+}
+
+.assinatura_sotm {
+  height: 60px;
+}

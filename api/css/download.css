@@ -1,0 +1,70 @@
+/*Configurações de lagura,tamanho,formatação na section Download*/
+
+  /*Configurações da section do Download e seu tamanho*/
+
+  .download-section{
+    padding: 85px 5%;
+    background-color: #f0f0f0;
+  }
+
+  .download-section h4 {
+    color: #333;
+    margin-top: 15px;
+  }
+
+  /*Configurações do conatiner da section Download*/
+
+  .container-download {
+    width: 400px;
+    height: auto;
+    background-color: #f8f9fa;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+	  padding-bottom: 24px;
+  }
+
+  /*Elementos da section Donwloados*/ 
+
+  /*Configurações do card*/
+  .card {
+    border: none;
+  }
+
+  .card-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #222;
+    font-family: "FinalSix";
+  }  
+
+  /*Icons e Botão de Download*/
+
+  .icon {
+    font-size: 60px;
+    color: orange;
+    margin-bottom: 10px;
+  }
+
+  .btn-download {
+    margin-top: auto; /* Empurra o botão para a parte inferior do card */
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    align-self: center; /* Centraliza o botão */
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    background: var(--gradient-01);
+  }
+
+  .btn-download:hover {
+    background: var(--gradient-03);
+    color: white;
+  }
+
+  

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.9.0"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(css|js|image|favicon.ico)/(.*)",
+      "dest": "/api/assets.php?type=$1&file=$2"
+    },
+    { "src": "/galeria.php",  "dest": "/api/galeria.php" },
+    { "src": "/(.*)",  "dest": "/api/index.php" }
+  ]
+}

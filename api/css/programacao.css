@@ -1,0 +1,182 @@
+#dia4 {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*Configurações de section programação*/
+.programacao-section{
+  padding: 50px;
+  background-color: #f0f0f0;
+}
+
+.scrollable {
+  width: 100%;
+}
+
+/*Configurações dos botões da tabela de programação*/
+.tab-pane {
+  display: none;
+}
+
+.tab-content {
+  margin-top: 0;
+  overflow-x: hidden;
+}
+
+.tab-pane.active {
+  display: block;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+tab-pane::-webkit-scrollbar { 
+    display: none;  
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.tab-button {
+  padding: 10px 24px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 2px;
+  box-shadow: unset;
+  border-radius: 5px 5px 0px 0px;
+  color: #757575;
+  background: #ebeced;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tab-button.active {
+  color: #fcfafa;
+  background: var(--color-03);
+}
+
+/*Configurações da tabela de programação*/
+
+.table-programming {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0;
+  background: #fff;
+}
+
+/*Configurações das tags da tabelas*/
+
+
+.table-programming strong {
+	font-size: 0.92rem;
+}
+
+.table-programming .td-bold {
+	font-size: 0.825rem;
+}
+
+.table-programming th,
+.table-programming td {
+  border: 1px solid #e0e0e0;
+  padding: 12px 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-programming th.text-center,
+.table-programming td.text-center {
+  text-align: center;
+}
+
+.tabsections03 th {
+  font-weight: bold;
+  font-family: "FinalSix", Arial, Helvetica, sans-serif;
+  color: #fcfafa;
+  background: var(--gradient-04);
+}
+
+#tabhead {
+  font-weight: bold;
+  font-family: "FinalSix", Arial, Helvetica, sans-serif;
+  color: #fcfafa;
+  background: var(--gradient-01);
+  font-size: 1rem;
+}
+
+.tabsections {
+  font-weight: bold;
+  font-family: "FinalSix", Arial, Helvetica, sans-serif;
+  color: #fcfafa;
+  background: var(--gradient-01);
+}
+
+.tabsections02 {
+  font-weight: bold;
+  font-family: "FinalSix", Arial, Helvetica, sans-serif;
+  color: #fcfafa;
+  background: var(--gradient-02);
+}
+.tabsections03 {
+  font-weight: bold;
+  font-family: finalSix, Arial, Helvetica, sans-serif;
+  color: #fcfafa;
+  background: var(--gradient-04);
+}
+
+.td-bold {
+  font-weight: bold;
+}
+
+.palestrantes strong {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.palestrantes small {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.titulo-programacao{
+  color: var(--main-text-dark-color);
+}
+
+/*Configurações dos botões da programação*/  
+
+.button-geopublica, .button-state-of-map {
+  font-family: "finalsix", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 0px 10px 10px 0px;
+  border: 1px solid #757575;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.4s ease-in;
+  background-color: white;
+  color: black;
+}
+
+.button-geopublica:hover, .button-geopublica.active{
+  background: var(--gradient-04);
+  color: white;
+}
+
+.button-geopublica:hover{
+  transform: translateY(-4px);
+  transition: background-color 0.3s ease, transform 0.2s ease-out;
+}
+
+
+.button-state-of-map:hover, .button-state-of-map.active {
+  background:var(--gradient-02);
+  color: white;
+}
+
+.button-state-of-map:hover{
+  transform: translateY(-2px);
+}
+
+

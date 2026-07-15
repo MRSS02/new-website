@@ -1,0 +1,76 @@
+.h2-patrocinio {
+  text-align: left;
+  font-size: 0.8rem;
+  color: #afaeae;
+  margin-top: 10px;
+}
+
+/*Configuracões das sections patrocinadores*/
+.patrocinadores-section {
+  color: #f8f9fa;
+  background: white;
+  padding: 50px;
+}
+.patrocinio {
+  height: 100%;
+  padding: 50px;
+}
+.header-patrocinio {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.divisao {
+  width: 2px;              /* espessura da linha */
+  height: 90px;           /* altura da linha */
+  border: 1px solid #c4c4c4;
+
+}
+
+/*configurações de linhas*/
+.row-patrocinio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.row-apoio {
+  /* display: flex
+; */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.patrocinio-item {
+  flex: 0 1 auto;
+  text-align: center;
+  padding: 15px;
+}
+
+/*Mudnaças de tamanhos de imagens de palestrantes*/
+.patrocinio-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.img-patrocinio {
+  display: block;
+  margin: 0 auto;
+}
+.patrocinio-grande{
+  flex: 0 1 310px;
+}
+
+.patrocinio-pequeno{
+ flex: 0 1 410px; 
+}
+
+
