@@ -35,8 +35,8 @@
 
     .image-gallery img {
         width: 100%; /* Garante que a imagem ocupe o espaço do seu contêiner */
-        max-width: 300px; /* Largura máxima para cada imagem */
-        height: 169px; /* Mantém a proporção da imagem */
+        width: 304px; /* Largura máxima para cada imagem */
+        height: 171px; /* Mantém a proporção da imagem */
         border-radius: 8px; /* Bordas arredondadas */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
         transition: transform 0.3s ease; /* Efeito de transição suave */
