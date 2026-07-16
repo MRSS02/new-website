@@ -9,7 +9,7 @@ header {
   width: 100vw;
   max-width: 100%;
   position: fixed;
-  z-index: -1;
+  z-index: 1;
   overflow: hidden;
   max-height: 84px;
   height: 84px;
@@ -32,7 +32,7 @@ header::before {
 	opacity: 1 !important;
 	height: 84px;
 	top: -84px;
-	z-index: -1;
+	z-index: 1;
 	transition: top 0.25s ease-out !important;
 	background: linear-gradient(to bottom, #5A5A5AB0, #FFFFFF20);
     
