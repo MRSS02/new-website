@@ -63,7 +63,8 @@ header::before {
 } */
 
 #bg-navbar.navbar-color {
-	background: linear-gradient(to bottom, #308ef0d0, #1a92c820); 
+	background: linear-gradient(to bottom, #5e5380d0, #c3b2f7d0) !important;
+	background: linear-gradient(to bottom, #308ef0d0, #); 
 	transition: all 0.3s cubic-bezier(0.16, 0.24, 0.16, 0.94);
 	transition-delay: 0.2s;
 }
