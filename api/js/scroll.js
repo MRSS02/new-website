@@ -58,8 +58,8 @@ function aparecerBarra() {
 	}
 
     // Dinamicamente altera o background do cabeçalho quando há scroll;
-    let threshold0 = 0;
-	let threshold1 = 20;
+    let threshold0 = 20;
+    let threshold1 = about.offsetTop - navbar.offsetHeight - 12;
 
     if (scrollPosition > threshold0) {
 		bgNavbar.classList.add("navbar-scrolled");
