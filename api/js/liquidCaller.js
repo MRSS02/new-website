@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	  snapshot: "body", // The area used for refraction, <body> recommended and default
       target: ".liquidGL", // CSS selector for the element(s) to glass-ify
       resolution: 2.0, // The quality of the snapshot
-      refraction: 0.5, // Base refraction strength (0–1)
-      bevelDepth: 0.2, // Intensity of the edge bevel (0–1)
+      refraction: 0.8, // Base refraction strength (0–1)
+      bevelDepth: 0.4, // Intensity of the edge bevel (0–1)
       bevelWidth: 0.1, // Width of the bevel as a proportion of the element (0–1)
       frost: 2, // Subtle blur radius in px. 0 = crystal clear
       shadow: true, // Adds a soft drop-shadow under the pane
