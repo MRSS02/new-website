@@ -847,7 +847,7 @@
     align-items: center;
     padding: 100px 30px;
     transition: 0.3s cubic-bezier(1, 0.4, 1, 1.1);
-    z-index: 2;
+    z-index: 3;
     background: linear-gradient(to right, #308ef0d0, #1a92c830) !important;
     backdrop-filter: blur(8px) contrast(0.8) brightness(0.8) saturate(1.8);
   }

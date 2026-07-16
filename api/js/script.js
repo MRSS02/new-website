@@ -27,21 +27,7 @@ document.getElementById("navbar").addEventListener("click", function (e) {
 //Função do Botão flutuante!
 
 document.addEventListener('DOMContentLoaded', function() {
-
-    const modal = document.getElementById('modalInscricao');
-    const span = document.querySelector('.close');
-    
-    if (span !== null ) {
-		span.addEventListener('click', function () {
-		modal.style.display = 'none';
-    });
-	}
-    
-    window.addEventListener('click', function (event) {
-      if (event.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
+	
     // --- Seu código de clique (não muda) ---
     const popoutButtons = document.querySelectorAll('.popout .btn');
     popoutButtons.forEach(button => {

@@ -158,8 +158,7 @@ p {
 /*------------------------------*/
 
 /*ConfiguraÃ§Ãµes do corpo do site*/
-body,
-html {
+:root {
   margin: 0;
   padding: 0;
   width: 100%;

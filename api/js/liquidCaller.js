@@ -1,0 +1,33 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const glassEffect = liquidGL({
+	  snapshot: "body", // The area used for refraction, <body> recommended and default
+      target: ".liquidGL", // CSS selector for the element(s) to glass-ify
+      resolution: 2.0, // The quality of the snapshot
+      refraction: 0.5, // Base refraction strength (0–1)
+      bevelDepth: 0.2, // Intensity of the edge bevel (0–1)
+      bevelWidth: 0.1, // Width of the bevel as a proportion of the element (0–1)
+      frost: 2, // Subtle blur radius in px. 0 = crystal clear
+      shadow: true, // Adds a soft drop-shadow under the pane
+      specular: true, // Animated light highlights (slightly more GPU)
+      reveal: "none", // Reveal animation
+      tilt: false, // Whether tilt on hover is enabled
+      tiltFactor: 5, // If tilt is enabled, how much tilt
+      magnify: 1, // Magnification of lens content
+      on: {
+        init(instance) {
+          // The `init` callback fires once liquidGL has taken its snapshot
+          // and rendered the first frame. It's the ideal place to hide or
+          // prepare elements for reveal animations (e.g. with GSAP, ScrollTrigger)
+          // because it ensures the content is visible to the snapshot before
+          // you hide it from the user.
+          console.log("liquidGL ready!", instance);
+        },
+      },
+    });
+	// Register an element by its CSS selector
+
+});
+
+window.addEventListener("load", () => {
+    liquidGL.syncWith();
+});
