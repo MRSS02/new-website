@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
             threshold: 0.35
         });
 
-        intersectionObserver.observe(sectionHome);
+        if (sectionHome) intersectionObserver.observe(sectionHome);
     }
 
     // Função que DESATIVA a animação de scroll e limpa os estilos

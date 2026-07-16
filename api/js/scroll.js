@@ -47,7 +47,7 @@ function aparecerBarra() {
 	let bgNavbar = document.getElementById("bg-navbar");
 	let logo = document.getElementById("nav-logo");
 
-	if (about === null) {
+	if (!about) {
 		bgNavbar.classList.add("navbar-scrolled");
 		navbar.classList.add("navbar-scrolled");
 		logo.classList.remove("hidden");
