@@ -25,14 +25,14 @@ header::before {
   height: 84px;
   top: 0;
   left: 0;
-  z-index: -2;
+  z-index: -1;
 }
 
 #bg-navbar {
 	opacity: 1 !important;
 	height: 84px;
 	top: -84px;
-	z-index: 1;
+	z-index: -1;
 	transition: top 0.25s ease-out !important;
 	background: linear-gradient(to bottom, #5A5A5AB0, #FFFFFF20);
     
