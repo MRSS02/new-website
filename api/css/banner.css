@@ -5,7 +5,7 @@
 /*Configuraçõa do Background do banner e seu tamanho*/
 
 .banner-image-wrapper {
-	background: linear-gradient(45deg, #bca9f5, #726694) !important;
+	/* background: linear-gradient(45deg, #bca9f5, #726694) !important; */
 	width: 100vw;
 	height: 100% !important;
 }
@@ -17,7 +17,7 @@
   left: 0;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 480px;
+  min-height: 440px;
 }
 
 /*Configurações do container dentro do Banner*/
