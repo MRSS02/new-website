@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       reveal: "none", // Reveal animation
       tilt: false, // Whether tilt on hover is enabled
       tiltFactor: 5, // If tilt is enabled, how much tilt
-      magnify: 1.4, // Magnification of lens content
+      magnify: 1.8, // Magnification of lens content
       on: {
         init(instance) {
           // The `init` callback fires once liquidGL has taken its snapshot
