@@ -79,17 +79,17 @@ const intervalId9 = setTimeout(() => {
 const intervalId10 = setTimeout(() => {
     liquidGL.registerDynamic(".bg-navbar");
     liquidGL.syncWith();
-}, 10000);
+}, 12000);
 
 const intervalId11 = setTimeout(() => {
     liquidGL.registerDynamic(".bg-navbar");
     liquidGL.syncWith();
-}, 12000);
+}, 15000);
 
 
 const intervalId12 = setTimeout(() => {
     liquidGL.registerDynamic(".bg-navbar");
     liquidGL.syncWith();
-}, 12000);
+}, 20000);
 
 
