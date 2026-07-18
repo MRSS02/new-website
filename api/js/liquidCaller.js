@@ -40,51 +40,56 @@ const intervalId2 = setTimeout(() => {
     liquidGL.syncWith();
 }, 1500);
 
-const intervalId2 = setTimeout(() => {
+const intervalId3 = setTimeout(() => {
     liquidGL.registerDynamic(".bg-navbar");
     liquidGL.syncWith();
 }, 3000);
 
 
-const intervalId2 = setTimeout(() => {
+const intervalId4 = setTimeout(() => {
     liquidGL.registerDynamic(".bg-navbar");
     liquidGL.syncWith();
 }, 4000);
 
-const intervalId2 = setTimeout(() => {
+const intervalId5 = setTimeout(() => {
     liquidGL.registerDynamic(".bg-navbar");
     liquidGL.syncWith();
 }, 5000);
 
-const intervalId2 = setTimeout(() => {
+const intervalId6 = setTimeout(() => {
     liquidGL.registerDynamic(".bg-navbar");
     liquidGL.syncWith();
 }, 6000);
 
-const intervalId2 = setTimeout(() => {
+const intervalId7 = setTimeout(() => {
     liquidGL.registerDynamic(".bg-navbar");
     liquidGL.syncWith();
 }, 7000);
 
-const intervalId2 = setTimeout(() => {
+const intervalId8 = setTimeout(() => {
     liquidGL.registerDynamic(".bg-navbar");
     liquidGL.syncWith();
 }, 8000);
 
-const intervalId2 = setTimeout(() => {
+const intervalId9 = setTimeout(() => {
     liquidGL.registerDynamic(".bg-navbar");
     liquidGL.syncWith();
 }, 9000);
 
-const intervalId2 = setTimeout(() => {
+const intervalId10 = setTimeout(() => {
     liquidGL.registerDynamic(".bg-navbar");
     liquidGL.syncWith();
 }, 10000);
 
-const intervalId2 = setTimeout(() => {
+const intervalId11 = setTimeout(() => {
     liquidGL.registerDynamic(".bg-navbar");
     liquidGL.syncWith();
 }, 12000);
 
+
+const intervalId12 = setTimeout(() => {
+    liquidGL.registerDynamic(".bg-navbar");
+    liquidGL.syncWith();
+}, 12000);
 
 
