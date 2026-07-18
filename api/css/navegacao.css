@@ -29,7 +29,7 @@ header::before {
 }
 
 #bg-navbar {
-    opacity: 0;
+    opacity: 1 !important;
 	height: 84px;
 	top: -84px;
 	z-index: 2;
@@ -39,7 +39,7 @@ header::before {
 }
 
 #bg-navbar:before {
-  opacity: 0;
+  opacity: 1 !important;
   content: "";
   position: fixed;
   width: 100vw;
@@ -50,7 +50,7 @@ header::before {
 } 
 
 #bg-navbar.navbar-scrolled {
-	opacity: 1;
+	opacity: 1 !important;
 	top: 0;
 	transition: top 0.6s cubic-bezier(0.16, 0.24, 0.16, 0.94), background 0.3s cubic-bezier(0.16, 0.24, 0.16, 0.94) !important;
 }
