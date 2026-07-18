@@ -35,7 +35,7 @@ const intervalId = setTimeout(() => {
     liquidGL.syncWith();
 }, 500);
 
-const intervalId = setInterval(() => {
+const intervalId2 = setInterval(() => {
     liquidGL.registerDynamic(".bg-navbar");
     liquidGL.syncWith();
 }, 5000);
