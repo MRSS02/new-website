@@ -29,6 +29,7 @@ header::before {
 }
 
 #bg-navbar {
+    opacity: 0;
 	height: 84px;
 	top: -84px;
 	z-index: 2;
@@ -38,6 +39,7 @@ header::before {
 }
 
 #bg-navbar:before {
+  opacity: 0;
   content: "";
   position: fixed;
   width: 100vw;
