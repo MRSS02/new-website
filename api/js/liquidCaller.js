@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const glassEffect = liquidGL({
+    glassEffect = liquidGL({
 	  snapshot: "body", // The area used for refraction, <body> recommended and default
       target: ".liquidGL", // CSS selector for the element(s) to glass-ify
       resolution: 2.0, // The quality of the snapshot
       refraction: 0.92, // Base refraction strength (0–1)
-      bevelDepth: 0.72, // Intensity of the edge bevel (0–1)
+      bevelDepth: 0.6, // Intensity of the edge bevel (0–1)
       bevelWidth: 0.24, // Width of the bevel as a proportion of the element (0–1)
-      frost: 8, // Subtle blur radius in px. 0 = crystal clear
+      frost: 6, // Subtle blur radius in px. 0 = crystal clear
       shadow: false, // Adds a soft drop-shadow under the pane
-      specular: true, // Animated light highlights (slightly more GPU)
+      specular: false, // Animated light highlights (slightly more GPU)
       reveal: "none", // Reveal animation
       tilt: false, // Whether tilt on hover is enabled
       tiltFactor: 5, // If tilt is enabled, how much tilt
-      //magnify: 1, // Magnification of lens content
+      magnify: 1.4, // Magnification of lens content
       on: {
         init(instance) {
           // The `init` callback fires once liquidGL has taken its snapshot
@@ -26,11 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 	// Register an element by its CSS selector
 
-	liquidGL.registerDynamic(".bg-navbar");
-	liquidGL.registerDynamic(".about-section");
+    //liquidGL.registerDynamic(".navbar-header");
 
 });
 
-window.addEventListener("load", function () {
-	liquidGL.syncWith();
-});
+const intervalId = setTimeout(() => {
+    liquidGL.registerDynamic(".bg-navbar");
+    liquidGL.syncWith();
+}, 500);
+
+
