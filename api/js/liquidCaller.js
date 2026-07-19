@@ -1,12 +1,13 @@
 let glassEfect;
+let lastWidth;
 
 document.addEventListener("DOMContentLoaded", () => {
     glassEffect = liquidGL({
 	  snapshot: "body", // The area used for refraction, <body> recommended and default
       target: ".liquidGL", // CSS selector for the element(s) to glass-ify
       resolution: 2.0, // The quality of the snapshot
-      refraction: 0.86, // Base refraction strength (0–1)
-      bevelDepth: 0.64, // Intensity of the edge bevel (0–1)
+      refraction: 0.48, // Base refraction strength (0–1)
+      bevelDepth: 0.42, // Intensity of the edge bevel (0–1)
       bevelWidth: 0.098, // Width of the bevel as a proportion of the element (0–1)
       frost: 4, // Subtle blur radius in px. 0 = crystal clear
       shadow: true, // Adds a soft drop-shadow under the pane
@@ -36,5 +37,19 @@ const intervalId = setTimeout(() => {
     liquidGL.registerDynamic(".img");
     liquidGL.syncWith();
 }, 1000);
+
+function resize(element) {
+    clearTimeout(resizeTimeout);
+
+    resizeTimeout = setTimeout(() => {
+        // Check if the actual horizontal width changed
+        if (element.innerWidth !== lastWidth) {
+            lastWidth = element.innerWidth;
+            liquidGL.registerDynamic(".nav-item-gl");
+            liquidGL.registerDynamic(".img");
+            liquidGL.syncWith();
+        }
+    }, 250);
+}
 
 
