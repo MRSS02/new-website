@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const intervalId = setTimeout(() => {
-    liquidGL.registerDynamic(".nav-item");
+    liquidGL.registerDynamic(".nav-item-gl");
     liquidGL.registerDynamic(".img");
     liquidGL.syncWith();
 }, 1000);
