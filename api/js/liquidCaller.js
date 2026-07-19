@@ -1,5 +1,5 @@
 let glassEfect;
-let resizeTimeout;
+let resizeTimeout = false;
 
 document.addEventListener("DOMContentLoaded", () => {
     glassEffect = liquidGL({
@@ -38,13 +38,16 @@ const intervalId = setTimeout(() => {
     liquidGL.syncWith();
 }, 1000);
 
-function resize() {
-    if (resizeTimeout) clearTimeout(resizeTimeout);
-
-    resizeTimeout = setTimeout(() => {
+function syncLiquid() {
+    if (resizeTimeout) {
+        return;
+    }
+    resizeTimeout = true;
+    let myTimeout = setTimeout(() => {
+        liquidGL.registerDynamic(".img");
         liquidGL.syncWith();
-
-    }, 100);
+        resizeTimeout = false;
+    }, 250);
 }
 
-window.addEventListener("resize", resize);
+window.addEventListener("resize", syncLiquid);
