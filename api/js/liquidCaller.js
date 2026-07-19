@@ -38,7 +38,7 @@ const intervalId = setTimeout(() => {
     liquidGL.syncWith();
 }, 1000);
 
-const intervalId = setTimeout(() => {
+const intervalId2 = setTimeout(() => {
     liquidGL.registerDynamic(".nav-item-gl");
     liquidGL.registerDynamic(".img");
     liquidGL.syncWith();
