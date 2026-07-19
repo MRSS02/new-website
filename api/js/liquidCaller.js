@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
       target: ".liquidGL", // CSS selector for the element(s) to glass-ify
       resolution: 2.0, // The quality of the snapshot
       refraction: 0.64, // Base refraction strength (0–1)
-      bevelDepth: 0.42, // Intensity of the edge bevel (0–1)
-      bevelWidth: 0.098, // Width of the bevel as a proportion of the element (0–1)
+      bevelDepth: 0.48, // Intensity of the edge bevel (0–1)
+      bevelWidth: 0.0985, // Width of the bevel as a proportion of the element (0–1)
       frost: 4, // Subtle blur radius in px. 0 = crystal clear
       shadow: true, // Adds a soft drop-shadow under the pane
       specular: true, // Animated light highlights (slightly more GPU)
