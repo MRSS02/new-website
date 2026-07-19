@@ -1,7 +1,7 @@
 document.getElementById("navbar").addEventListener("click", function (e) {
     const menuabrir = document.getElementById("menu-abrir-button");
     const menufechar = document.getElementById("menu-fechar-button");
-    const navmenu = document.getElementById("nav-menu");
+    const navmenu = document.getElementById("nav-menu-2");
     const navbar = document.getElementById("navbar");
     const navout = document.getElementById("navout");
 
@@ -27,7 +27,8 @@ document.getElementById("navbar").addEventListener("click", function (e) {
 //Função do Botão flutuante!
 
 document.addEventListener('DOMContentLoaded', function() {
-	
+
+
     // --- Seu código de clique (não muda) ---
     const popoutButtons = document.querySelectorAll('.popout .btn');
     popoutButtons.forEach(button => {

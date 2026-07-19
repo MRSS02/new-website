@@ -834,20 +834,24 @@
     gap: 12px;
   }
 
-  .navbar .nav-menu {
+  .navbar #nav-menu {
+    display: none;
+  }
+
+  .navbar #nav-menu-2 {
     display: flex;
     position: fixed;
-    left: -300px;
-    top: 0;
+    left: -308px;
+    top: -8px;
     width: 300px;
     color: white;
-    height: 100vh;
+    height: calc(100vh + 8px);
     background: white;
     flex-direction: column;
     align-items: center;
     padding: 100px 30px;
     transition: 0.32s cubic-bezier(0.16, 0.72, 0.84, 0.92);
-    z-index: 10;
+    z-index: 10 !important;
     opacity: 1 !important;
     background: linear-gradient(to right, #5b508dc2, #c6b4fa70) !important;
     backdrop-filter: blur(8px) contrast(0.8) brightness(0.8) saturate(1.8);
@@ -855,30 +859,30 @@
 
   .navbar .navout {
     position: fixed;
-    left: -1;
-    top: 0;
+    left: -4px;
+    top: -8px;
 	opacity: 0;
     width: 1px;
     height: 1px;
     background: rgba(0, 0, 0, 0);
 	transition: opacity 0.25s ease-out;
-    z-index: -1;
+    z-index: 9;
   }
 
   .navbar .navout2 {
     position: fixed;
-    left: -302px;
-    top: 0;
+    left: -310px;
+    top: -8px;
     width: 1px;
     height: 1px;
-    z-index: -1;
+    z-index: 9;
   }
 
   body.mobile-menu-show .navbar.navbar-scrolled .navout2 {
     
     width: 100vw;
-    top: 0;
-    left: 0;
+    top: -8px;
+    left: -4px !important;
     backdrop-filter: blur(8px) contrast(0.8) brightness(0.7) saturate(1.8);
     height: 84px;
 	transition: background 0.5s cubic-bezier(0, 0.2, 0.15, 0.85);
@@ -894,10 +898,10 @@
     backdrop-filter: none;
     content: "";
     position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    left: -4px;
+    top: -8px;
+    width: 100vw;
+    height: 100vh;
   }
 
   .navbar .nav-menu .nav-link,
@@ -930,13 +934,13 @@
   }
 
   body.mobile-menu-show .navbar .nav-menu {
-    left: 0;
+    left: -8px !important;
     transition: 0.3s cubic-bezier(0, 0.2, 0.15, 0.85);
   }
 
   body.mobile-menu-show .navbar .navout {
-    width: 100vw;
-    height: 100vh;
+    width: calc(100vw + 4px);
+    height: calc(100vh + 8px);
     background: rgba(18, 18, 18, 0.3);
 	opacity: 1;
 	z-index: 1;

@@ -4,11 +4,6 @@ canvas {
     z-index: 2;
 }
 
-section {
-    position: relative;
-    z-index: 0;
-}
-
 header {
   /*background: linear-gradient(
     to left top,
@@ -20,7 +15,7 @@ header {
   position: fixed;
   top: 4px;
   z-index: 1;
-  overflow: hidden;
+  overflow: visible;
   max-height: 84px;
   height: 84px;
   background-color: transparent;
@@ -36,7 +31,7 @@ header::before {
   height: 84px;
   top: 4px;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   border-radius: 36px; 
 }
 
@@ -67,10 +62,16 @@ header::before {
     border-radius: 36px;
 }
 
+.navbar #nav-menu-2 {
+    display: none;
+    overflow: visible !important;
+}
+
 #bg-navbar {
 	height: 84px;
 	top: -92px;
 	z-index: 1;
+    position: fixed;
 	transition: top 0.25s ease-out !important;
 	background: linear-gradient(to bottom, #5b508dad, #c6b4fa82) !important;
     border-radius: 36px;
@@ -79,7 +80,7 @@ header::before {
 
 #bg-navbar:before {
   content: "";
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 84px;
   left: 0;
