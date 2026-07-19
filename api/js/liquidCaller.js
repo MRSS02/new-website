@@ -1,5 +1,5 @@
 let glassEfect;
-let lastWidth;
+let resizeTimeout;
 
 document.addEventListener("DOMContentLoaded", () => {
     glassEffect = liquidGL({
@@ -38,18 +38,13 @@ const intervalId = setTimeout(() => {
     liquidGL.syncWith();
 }, 1000);
 
-function resize(element) {
-    clearTimeout(resizeTimeout);
+function resize() {
+    if (resizeTimeout) clearTimeout(resizeTimeout);
 
     resizeTimeout = setTimeout(() => {
-        // Check if the actual horizontal width changed
-        if (element.innerWidth !== lastWidth) {
-            lastWidth = element.innerWidth;
-            liquidGL.registerDynamic(".nav-item-gl");
-            liquidGL.registerDynamic(".img");
-            liquidGL.syncWith();
-        }
-    }, 250);
+        liquidGL.syncWith();
+
+    }, 100);
 }
 
-
+window.addEventListener("resize", resize);
