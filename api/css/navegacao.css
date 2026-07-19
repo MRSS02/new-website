@@ -47,7 +47,7 @@ header::before {
 
 .nav-item:hover {
     will-change: transform;
-    transform: scale(1.12) !important;
+    transform: scale(1.08) !important;
     transition: transform 0.5s cubic-bezier(0,.2,.15,.85) !important;
 }
 
@@ -231,7 +231,7 @@ header .navbar {
   background: var(--color-03);;
   box-shadow: 2px 2px 5px hsla(0, 0%, 9%, 0.3);
   color: var(--white) !important;
-  transform: scale(1.25) !important;
+  transform: scale(1.05) !important;
 }
 
 .nav-link.active:hover, .nav-link-ext:hover{
@@ -239,7 +239,7 @@ header .navbar {
   /* font-weight: bold; */
   background: var(--color-03);
   box-shadow: 2px 2px 5px 2px hsl(0deg 0% 9% / 20%);
-  transform: scale(1.25) !important;
+  transform: scale(1.05) !important;
 }
 
 /*Configurações da logo*/
