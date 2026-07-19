@@ -1,5 +1,8 @@
 let glassEfect;
-let resizeTimeout = false;
+let resizeTimeout;
+let liquidRendered;
+let liquidAdded;
+let intervalId;
 
 document.addEventListener("DOMContentLoaded", () => {
     glassEffect = liquidGL({
@@ -23,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
           // prepare elements for reveal animations (e.g. with GSAP, ScrollTrigger)
           // because it ensures the content is visible to the snapshot before
           // you hide it from the user.
+          liquidRendered = true;
           console.log("liquidGL ready!", instance);
         },
       },
@@ -32,17 +36,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-const intervalId = setTimeout(() => {
+intervalId = setInterval(() => {
+    if (!liquidRendered) return;
+    if (liquidAdded) {
+        clearInterval(intervalId);
+        return;
+    }
     liquidGL.registerDynamic(".nav-item-gl");
     liquidGL.registerDynamic(".img");
     liquidGL.syncWith();
-}, 1000);
+    liquidAdded = true;
+}, 500);
 
-const intervalId2 = setTimeout(() => {
-    liquidGL.registerDynamic(".nav-item-gl");
-    liquidGL.registerDynamic(".img");
-    liquidGL.syncWith();
-}, 3000);
 
 function syncLiquid() {
     if (resizeTimeout) {
