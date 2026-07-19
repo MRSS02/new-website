@@ -8,17 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
     glassEffect = liquidGL({
 	  snapshot: "body", // The area used for refraction, <body> recommended and default
       target: ".liquidGL", // CSS selector for the element(s) to glass-ify
-      resolution: 1.84, // The quality of the snapshot
-      refraction: 0.64, // Base refraction strength (0–1)
-      bevelDepth: 0.54, // Intensity of the edge bevel (0–1)
-      bevelWidth: 0.0986, // Width of the bevel as a proportion of the element (0–1)
-      frost: 4, // Subtle blur radius in px. 0 = crystal clear
+      resolution: 1.82, // The quality of the snapshot
+      refraction: 0.72, // Base refraction strength (0–1)
+      bevelDepth: 0.56, // Intensity of the edge bevel (0–1)
+      bevelWidth: 0.0996, // Width of the bevel as a proportion of the element (0–1)
+      frost: 2, // Subtle blur radius in px. 0 = crystal clear
       shadow: true, // Adds a soft drop-shadow under the pane
       specular: true, // Animated light highlights (slightly more GPU)
       reveal: "fade", // Reveal animation
       tilt: false, // Whether tilt on hover is enabled
       tiltFactor: 5, // If tilt is enabled, how much tilt
-      magnify: 1.018, // Magnification of lens content
+      magnify: 1.0176, // Magnification of lens content
       on: {
         init(instance) {
           // The `init` callback fires once liquidGL has taken its snapshot
