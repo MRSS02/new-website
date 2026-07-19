@@ -41,14 +41,15 @@ header::before {
 }
 
 .nav-item {
-    transition: transform 0.24s cubic-bezier(0.16,.24,.32,.96) !important;
+    transition: all 0.24s cubic-bezier(0.16,.24,.32,.96) !important;
 }
 
 
 .nav-item:hover {
-    will-change: transform;
+    will-change: transform, filter;
+    filter: brightness(1.16);
     transform: scale(1.08) !important;
-    transition: transform 0.5s cubic-bezier(0,.2,.15,.85) !important;
+    transition: all 0.5s cubic-bezier(0,.2,.15,.85) !important;
 }
 
 
@@ -70,7 +71,7 @@ header::before {
 #bg-navbar {
 	height: 84px;
 	top: -92px;
-	z-index: 1;
+	z-index: 2;
     position: fixed;
 	transition: all 0.25s ease-out !important;
 	background: linear-gradient(to bottom, #5b508db0, #c6b4fa80) !important;
@@ -87,7 +88,7 @@ header::before {
   top: 0;
   border-radius: 36px;
   backdrop-filter: blur(4px) contrast(0.86) brightness(0.72) saturate(1.42) !important;
-  z-index: 1;
+  z-index: 2;
 } 
 
 #bg-navbar.navbar-scrolled {
@@ -122,7 +123,7 @@ header::before {
     height: 100%;
     position: relative;
     display: block !important;
-    background: linear-gradient(to bottom right, #5a506d84, #c6b4fa20) !important;
+    background: linear-gradient(to bottom right, #5a506d86, #c8b6fd1e) !important;
 }
 
 .navbar {
@@ -307,7 +308,7 @@ header .navbar {
   background: #F00020;
   color: white;
   border-radius: 16px;
-  border-width: 4px;
+  border-width: 0px;
   backdrop-filter: blur(2px) contrast(0.85) brightness(0.6) saturate(1.48);
   opacity: 1 !important;
   }
