@@ -46,6 +46,7 @@ intervalId = setInterval(() => {
     liquidGL.registerDynamic(".img");
     liquidGL.syncWith();
     liquidAdded = true;
+    console.log("at last")
 }, 500);
 
 
