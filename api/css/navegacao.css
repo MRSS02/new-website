@@ -42,11 +42,18 @@ header::before {
 
 .nav-link {
     pointer-events: auto !important;
-    will-change: transform;
+    
 }
 
-.nav-link:hover {
-    
+.nav-item {
+    transition: transform 0.24s cubic-bezier(0.16,.24,.32,.96) !important;
+}
+
+
+.nav-item:hover {
+    will-change: transform;
+    transform: scale(1.12) !important;
+    transition: transform 0.5s cubic-bezier(0,.2,.15,.85) !important;
 }
 
 
