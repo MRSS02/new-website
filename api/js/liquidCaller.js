@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const intervalId = setTimeout(() => {
-    liquidGL.registerDynamic(".bg-navbar");
     liquidGL.registerDynamic(".subscribe");
     liquidGL.registerDynamic(".img");
     liquidGL.syncWith();
