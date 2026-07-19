@@ -37,11 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 intervalId = setInterval(() => {
-    if (liquidRendered && liquidAdded) {
+    if (liquidRendered) {
         clearInterval(intervalId);
         return;
     }
-    if (liquidRendered) liquidAdded = true;
     liquidGL.registerDynamic(".nav-item-gl");
     liquidGL.registerDynamic(".img");
     liquidGL.syncWith();
