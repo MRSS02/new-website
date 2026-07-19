@@ -1,7 +1,7 @@
 let glassEfect;
-let resizeTimeout;
-let liquidRendered;
-let liquidAdded;
+let resizeTimeout = false;
+let liquidRendered = false;
+let liquidAdded = false;
 let intervalId;
 
 document.addEventListener("DOMContentLoaded", () => {
