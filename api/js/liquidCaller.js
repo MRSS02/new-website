@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     glassEffect = liquidGL({
 	  snapshot: "body", // The area used for refraction, <body> recommended and default
       target: ".liquidGL", // CSS selector for the element(s) to glass-ify
-      resolution: 1.82, // The quality of the snapshot
+      resolution: 1.64, // The quality of the snapshot
       refraction: 0.64, // Base refraction strength (0–1)
       bevelDepth: 0.58, // Intensity of the edge bevel (0–1)
       bevelWidth: 0.0992, // Width of the bevel as a proportion of the element (0–1)
