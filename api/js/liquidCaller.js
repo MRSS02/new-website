@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	  snapshot: "body", // The area used for refraction, <body> recommended and default
       target: ".liquidGL", // CSS selector for the element(s) to glass-ify
       resolution: 2.0, // The quality of the snapshot
-      refraction: 0.84, // Base refraction strength (0–1)
+      refraction: 0.86, // Base refraction strength (0–1)
       bevelDepth: 0.64, // Intensity of the edge bevel (0–1)
       bevelWidth: 0.098, // Width of the bevel as a proportion of the element (0–1)
       frost: 4, // Subtle blur radius in px. 0 = crystal clear
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       reveal: "fade", // Reveal animation
       tilt: false, // Whether tilt on hover is enabled
       tiltFactor: 5, // If tilt is enabled, how much tilt
-      magnify: 1.018, // Magnification of lens content
+      magnify: 1.0182, // Magnification of lens content
       on: {
         init(instance) {
           // The `init` callback fires once liquidGL has taken its snapshot
