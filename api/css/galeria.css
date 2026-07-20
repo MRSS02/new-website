@@ -24,6 +24,56 @@
 
 /*---|Codigo da nova galeria|---*/
     
+	
+	#galeria .section-content {
+		max-width: 1820px;
+		overflow: visible;
+	}
+	
+	#galeria .section-content .tab-pane, #galeria .section-content .tab-content {
+		overflow: visible;
+	}
+	
+	@media screen and (max-width: 2000px) {
+		#galeria .section-content {
+			max-width: 1456px;
+		}
+	}
+	@media screen and (max-width: 1536px) {
+		#galeria .section-content {
+			max-width: 1090px;
+		}
+	}
+	@media screen and (max-width: 1170px) {
+		#galeria .section-content {
+			max-width: 720px;
+		}
+	}
+	@media screen and (max-width: 800px) {
+		#galeria .section-content {
+			max-width: 486px;
+		}
+	}
+	@media screen and (max-width: 520px) {
+		#galeria .section-content {
+			max-width: 454px;
+		}
+	}
+	@media screen and (max-width: 468px) {
+		#galeria .section-content {
+			max-width: 422px;
+		}
+	}
+	@media screen and (max-width: 432px) {
+		#galeria .section-content {
+			max-width: 390px;
+		}
+	}
+	@media screen and (max-width: 400px) {
+		#galeria .section-content {
+			max-width: 360px;
+		}
+	}
 /*Configurações de Imagens da Gallery*/
     .image-gallery {
         display: flex; /* Usa flexbox para alinhar os itens */
@@ -31,20 +81,52 @@
         gap: 15px; /* Espaçamento entre as imagens */
         justify-content: center; /* Centraliza as imagens no contêiner */
         padding: 20px 0; /* Espaçamento interno (vertical) */
+		overflow: visible;
     }
 
     .image-gallery img {
         width: 100%; /* Garante que a imagem ocupe o espaço do seu contêiner */
-        max-width: 304px; /* Largura máxima para cada imagem */
-        height: 171px; /* Mantém a proporção da imagem */
-        border-radius: 8px; /* Bordas arredondadas */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-        transition: transform 0.3s ease; /* Efeito de transição suave */
+        max-width: 352px; /* Largura máxima para cada imagem */
+        height: 198px; /* Mantém a proporção da imagem */
+        border-radius: 12px; /* Bordas arredondadas */
+        box-shadow: 4px 4px 8px 1px rgba(12, 12, 12, 0.36); /* Sombra suave */
+        transition: transform 0.32s ease-in, transform 0.32s ease-in; /* Efeito de transição suave */
     }
 
     .image-gallery img:hover {
-        transform: scale(1.05); /* Aumenta um pouco a imagem ao passar o mouse */
+        transform: scale(1.058); /* Aumenta um pouco a imagem ao passar o mouse */
     }
+	
+	@media screen and (max-width: 800px) {
+		.image-gallery img {
+			max-width: 480px; /* Largura máxima para cada imagem */
+			height: 270px; /* Mantém a proporção da imagem */
+		}
+	}
+	@media screen and (max-width: 520px) {
+		.image-gallery img {
+			max-width: 448px; /* Largura máxima para cada imagem */
+			height: 252px; /* Mantém a proporção da imagem */
+		}
+	}
+	@media screen and (max-width: 468px) {
+		.image-gallery img {
+			max-width: 416px; /* Largura máxima para cada imagem */
+			height: 234px; /* Mantém a proporção da imagem */
+		}
+	}
+	@media screen and (max-width: 432px) {
+		.image-gallery img {
+			max-width: 384px; /* Largura máxima para cada imagem */
+			height: 216px; /* Mantém a proporção da imagem */
+		}
+	}
+	@media screen and (max-width: 400px) {
+		.image-gallery img {
+			max-width: 352px; /* Largura máxima para cada imagem */
+			height: 198px; /* Mantém a proporção da imagem */
+		}
+	}
 
 /*---------------------------------------------------------------*/   
 

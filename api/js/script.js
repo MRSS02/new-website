@@ -217,11 +217,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+//Script da Galeria 
 
 document.addEventListener("DOMContentLoaded", function () {
 
     const lightbox = document.getElementById('lightbox');
-    if (lightbox) {
+    if (!lightbox) return; 
         const lightboxImg = document.getElementById('lightbox-img');
         const closeBtn = document.querySelector('.lightbox-close');
         const prevBtn = document.querySelector('.lightbox-prev');
@@ -230,35 +231,46 @@ document.addEventListener("DOMContentLoaded", function () {
         let currentIndex;
         let imagesInCurrentTab = [];
 
-        // Função para abrir o lightbox
-        const openLightbox = (event) => {
-            const clickedImg = event.target.closest('img');
-            if (!clickedImg) return; // Se o clique não foi em uma imagem, sai
-
-            const activeGallery = document.querySelector('.tab-pane.active .image-gallery');
-            imagesInCurrentTab = Array.from(activeGallery.querySelectorAll('img'));
-            currentIndex = imagesInCurrentTab.findIndex(img => img === clickedImg);
-
-            if (currentIndex > -1) {
-                lightbox.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Impede o scroll da página ao fundo
-                showImage(currentIndex);
-            }
-        };
-
-        // Função para exibir a imagem correta e controlar as setas
+		// Função para exibir a imagem correta e controlar as setas
         const showImage = (index) => {
             if (index < 0 || index >= imagesInCurrentTab.length) {
                 return; // Índice inválido
             }
             lightboxImg.src = imagesInCurrentTab[index].src;
+			let indexLastDot = lightboxImg.src.lastIndexOf("."); // index of last dot in image name
+			//console.log(lightboxImg.src.substring(0, indexLastDot) + "_big" + lightboxImg.src.substring(indexLastDot));
+			lightboxImg.src = lightboxImg.src.substring(0, indexLastDot) + "_big" + lightboxImg.src.substring(indexLastDot);
             lightboxImg.alt = imagesInCurrentTab[index].alt;
             currentIndex = index;
+			
+			//Exibe a Lightbox
+			setTimeout(() => {
+				lightbox.style.display = 'flex';
+				document.body.style.overflow = 'hidden'; // Impede o scroll da página ao fundo
+			}, 120);
+			
 
             // Esconde ou mostra as setas de navegação
             prevBtn.style.display = (index === 0) ? 'none' : 'block';
             nextBtn.style.display = (index === imagesInCurrentTab.length - 1) ? 'none' : 'block';
         };
+
+        // Função para abrir o lightbox
+        const openLightbox = (event) => {
+			
+            const clickedImg = event.target.closest('img');
+            if (!clickedImg) return; // Se o clique não foi em uma imagem, sai
+
+            const activeGallery = document.querySelector('.tab-pane.active .image-gallery');
+			if (!activeGallery) return;
+            imagesInCurrentTab = Array.from(activeGallery.querySelectorAll('img'));
+            currentIndex = imagesInCurrentTab.findIndex(img => img === clickedImg);
+
+            if (currentIndex > -1) {
+                showImage(currentIndex);
+            }
+        };
+
 
         // Funções para navegar
         const showNext = () => showImage(currentIndex + 1);
@@ -295,7 +307,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 else if (event.key === 'Escape') closeLightbox();
             }
         });
-    }
+    
 });
 
 document.addEventListener('DOMContentLoaded', () => {
