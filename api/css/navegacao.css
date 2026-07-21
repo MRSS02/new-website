@@ -44,6 +44,13 @@ header::before {
     transition: all 0.24s cubic-bezier(0.16,.24,.32,.96) !important;
 }
 
+.nav-item-gl {
+    position: relative;
+	z-index: 5;
+	backdrop-filter: blur(2px) contrast(0.84) brightness(0.96) saturate(1.42) !important;
+	border-radius: 16px;
+}
+
 
 .nav-item:hover {
     will-change: transform, filter;
@@ -123,7 +130,7 @@ header::before {
     height: 100%;
     position: relative;
     display: block !important;
-    background: linear-gradient(to bottom right, #5a506d86, #c8b6fd1e) !important;
+    background: linear-gradient(to bottom right, #5a506d8a, #c8b6fd18) !important;
 }
 
 .navbar {
@@ -309,7 +316,7 @@ header .navbar {
   color: white;
   border-radius: 16px;
   border-width: 0px;
-  backdrop-filter: blur(2px) contrast(0.85) brightness(0.6) saturate(1.48);
+  /* backdrop-filter: blur(2px) contrast(0.84) brightness(0.96) saturate(1.42) !important; */
   opacity: 1 !important;
   }
 
