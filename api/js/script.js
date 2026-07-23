@@ -190,33 +190,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-/*Bio Palestrantes*/
-
-document.addEventListener('DOMContentLoaded', function () {
-
-    document.querySelectorAll('.toggle-btn').forEach(button => {
-        button.addEventListener('click', function (e) {
-            e.preventDefault(); // Impede o comportamento padrão do link
-            const targetCollapseId = this.getAttribute('href');
-            const targetCollapse = document.querySelector(targetCollapseId);
-
-            if (targetCollapse) {
-                // Alterna a classe 'show'
-                targetCollapse.classList.toggle('show');
-
-                // Altera o texto do botão e adiciona a classe 'active'
-                if (targetCollapse.classList.contains('show')) {
-                    this.textContent = 'Recolher biografia';
-                    this.classList.add('active');
-                } else {
-                    this.textContent = 'Expandir biografia';
-                    this.classList.remove('active');
-                }
-            }
-        });
-    });
-});
-
 //Script da Galeria 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -310,9 +283,12 @@ document.addEventListener("DOMContentLoaded", function () {
     
 });
 
+// SAcript de acionar botão
+
 document.addEventListener('DOMContentLoaded', () => {
     // Offset para ajustar a "linha de ativação" da seção
-    const OFFSET = 90;
+    const OFFSETTOP = 84;
+	const OFFSETBOTTOM = window.innerHeight - OFFSETTOP;
 
     // 1. Seleciona todos os elementos necessários
     const sections = Array.from(document.querySelectorAll('section[id]'));
@@ -322,7 +298,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const setActive = (hash) => {
         navLinks.forEach(link => {
             // A classe 'active' é aplicada apenas ao link cujo hash corresponde ao da seção visível
-            link.classList.toggle('active', link.hash === hash);
+			if (!link.hash) {
+				link.classList.remove('active');
+				return;
+			}
+            if (link.hash == hash) link.classList.add('active');
+			else link.classList.remove('active');
         });
     };
 
@@ -348,8 +329,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, {
             root: null, // Observa em relação à viewport do navegador
-            rootMargin: `-${OFFSET}px 0px -50% 0px`, // Ajusta a área de detecção
-            threshold: 0, // Ativa assim que qualquer parte do elemento se torna visível
+            rootMargin: `0px 0px 0px 0px`, // Ajusta a área de detecção
+            threshold: `${OFFSETTOP}px 0px ${OFFSETBOTTOM}px 0px`, // Ativa assim que qualquer parte do elemento se torna visível
         });
 
         // Pede ao observador para vigiar cada uma das seções
@@ -357,48 +338,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
-
-
-function aplicarExpandirTextoTodos(limite = 40) {
-  const textos = document.querySelectorAll('.texto');
-
-  textos.forEach((textoEl) => {
-    const btn = textoEl.nextElementSibling;
-
-    const textoCompleto = textoEl.dataset.full || textoEl.textContent;
-
-    if (!textoCompleto) return;
-
-    if (textoCompleto.length <= limite) {
-      textoEl.textContent = textoCompleto;
-      if (btn) btn.style.display = 'none';
-      return;
-    }
-
-    const textoCurto = textoCompleto.slice(0, limite) + '...';
-    let expandido = false;
-
-    textoEl.textContent = textoCurto;
-
-    if (btn) {
-      btn.style.display = 'inline';
-
-      btn.addEventListener('click', () => {
-        expandido = !expandido;
-
-        textoEl.textContent = expandido
-          ? textoCompleto
-          : textoCurto;
-
-        btn.textContent = expandido
-          ? 'Recolher'
-          : 'Expandir';
-      });
-    }
-  });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  aplicarExpandirTextoTodos(120);
-});
-
