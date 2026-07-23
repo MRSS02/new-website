@@ -132,12 +132,27 @@
 
 /*Configurações Para Imagem Full*/
 
-    /*Container para Imagem full*/
+        /*Container para Imagem full*/
     .lightbox-content {
         max-width: 85%;
         max-height: 85%;
         object-fit: contain; /* Garante que a imagem inteira seja visível sem distorção */
-        animation: zoom 0.5s ease;
+        animation: zoom 0.6s ease-in;
+    }
+	
+	.lightbox-content.zoom {
+        max-width: none;
+        max-height: 100vh;
+		height: 100vh;
+        object-fit: cover; /* Garante que a imagem inteira seja visível sem distorção */
+        transition: height 0.8s ease-in, width 1.2s ease-in;
+		overflow-x: auto !important;
+		
+		animation: zoom 0.6s ease-in;
+    }
+	
+	.lightbox-content.zoom img {
+		overflow-x: auto !important;
     }
 
     /* Background da função de Imagem Full */
@@ -147,11 +162,20 @@
         z-index: 1000;
         left: 0;
         top: 0;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         background-color: rgba(0, 0, 0, 0.85); /* Fundo preto semitransparente */
         justify-content: center;
         align-items: center;
+    }
+	
+	.lightbox.zoom {
+		max-width: none !important;
+        max-height: 100vh !important;
+		height: 100vh;
+		width: 200vw;
+		transform: translate(-25%, 0); 
+		overflow-x: scroll !important;
     }
 
     /*Configurações para icon "X"*/

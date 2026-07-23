@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			//Exibe a Lightbox
 			setTimeout(() => {
 				lightbox.style.display = 'flex';
-				document.body.style.overflow = 'hidden'; // Impede o scroll da página ao fundo
+				/* document.getElementById("galeria").style.overflowY = 'hidden'; */ // Impede o scroll da página ao fundo
 			}, 120);
 			
 
@@ -252,7 +252,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Função para fechar o lightbox
         const closeLightbox = () => {
             lightbox.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restaura o scroll da página
+            /* document.getElementById("galeria").style.overflowY = 'auto'; */ // Restaura o scroll da página
         };
 
         // Adiciona o evento de clique nas galerias
@@ -269,6 +269,18 @@ document.addEventListener("DOMContentLoaded", function () {
         lightbox.addEventListener('click', (event) => {
             if (event.target === lightbox) {
                 closeLightbox();
+            }
+        });
+		
+		lightbox.addEventListener('dblclick', (event) => {
+            if (event.target !== lightbox) {
+                if (lightboxImg.classList.contains("zoom")) {
+					lightbox.classList.remove("zoom");
+					lightboxImg.classList.remove("zoom");
+				} else {
+					lightbox.classList.add("zoom");
+					lightboxImg.classList.add("zoom");
+				}
             }
         });
 
