@@ -284,8 +284,8 @@ document.addEventListener("DOMContentLoaded", function () {
 					prevBtn.classList.add("zoom");
 					nextBtn.classList.add("zoom");
 				} else {
-					lightboxImg.style.offsetLeft = `${1 + window.screen.width - event.clientX}`;
-					lightboxImg.style.offsetTop = `${1 + window.screen.width - event.clientY}`;
+					lightboxImg.style.offsetLeft = `${window.screen.width - event.clientX}`;
+					lightboxImg.style.offsetTop = `${window.screen.width - event.clientY}`;
 					lightbox.classList.add("zoom");
 					lightboxImg.classList.add("zoom");
 					closeBtn.classList.add("zoom");
