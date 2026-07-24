@@ -199,9 +199,13 @@
         font-weight: bold;
         cursor: pointer;
         transition: color 0.12s ease-out;
+		padding: 0 16px;
     }
 	.lightbox-close.zoom {
-		right: calc(50vw + 48px);
+		right: calc(52vw + 16px);
+		background: #2A2A2A6A;
+		border-radius: 48px;
+		transition: background 0.24s ease-in;
 	}
     .lightbox-close:hover {
         color: #aaaaaa;
