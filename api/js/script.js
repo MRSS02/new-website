@@ -1,5 +1,3 @@
-let translated = 0;
-
 document.getElementById("navbar").addEventListener("click", function (e) {
     const menuabrir = document.getElementById("menu-abrir-button");
     const menufechar = document.getElementById("menu-fechar-button");
@@ -202,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
 	
-
+	let translated = 0;
     const lightbox = document.getElementById('lightbox');
     if (!lightbox) return; 
         const lightboxImg = document.getElementById('lightbox-img');
@@ -294,6 +292,8 @@ document.addEventListener("DOMContentLoaded", function () {
 					closeBtn.classList.remove("zoom");
 					prevBtn.classList.remove("zoom");
 					nextBtn.classList.remove("zoom");
+					translated = 0;
+					lightboxImg.style.transform = "";
 				} else {
 					
 					lightbox.classList.add("zoom");
@@ -309,9 +309,6 @@ document.addEventListener("DOMContentLoaded", function () {
             zoomLightboxImage(event);
         });
 		
-		// Duplo clique mobile
-		
-		
 		//checar se está em mobile
 		window.mobileCheck = function() {
 			let check = false;
@@ -320,6 +317,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			console.log(check);
 			return check;
 		};
+		
+		// Duplo clique mobile
 		
 		if (window.mobileCheck()) {
 			
@@ -349,18 +348,51 @@ document.addEventListener("DOMContentLoaded", function () {
 			// put the addEventListener on some tag
 			lightbox.addEventListener('doubletap', (event) => {
 				zoomLightboxImage(event);
-				zoomLightboxImage(event);
 			})
+			
+			let touchStartX;
+			//listener swipe início
+			lightboxImg.addEventListener('touchstart', (event) => {
+				touchStartX = event.changedTouches[0].clientX;
+				console.log(event.changedTouches);
+			}, { passive: true });
+
+			//listener swipe fim
+			lightboxImg.addEventListener('touchend', (event) => {
+				if (lightboxImg.classList.contains("zoom")) {
+					let touchEndX = event.changedTouches[0].clientX;
+					console.log(event.changedTouches);
+					handleSwipeGesture(touchEndX);
+				}
+			}, { passive: true });
+
+			function handleSwipeGesture(touchEndX) {
+				if (lightboxImg.classList.contains("zoom")) {
+					let distX = touchEndX - touchStartX;
+					translated = (translated + distX);
+					lightboxImg.style.transform = `translateX(${translated}px)`;
+				}
+			}
 		}
 
-		// Scroll
-		document.addEventListener('scroll', (event) => {
+		// Scroll para zoom
+		document.addEventListener('wheel', (event) => {
 			if (lightbox.style.display === 'flex') {
 				event.preventDefault();
-				translated += 1;
 				if (lightboxImg.classList.contains("zoom")) {
-					console.log(translated);
-					lightboxImg.style.transform = `translate(${translated}, 0)`;
+					if (event.deltaY > 0) {
+						translated -= 20;
+					} else if (event.deltaY < 0) {
+						translated += 20;	
+					} else if (event.deltaX > 0) {
+						translated -= 20;
+					} else if (event.deltaX < 0) {
+						translated += 20;
+					}
+					lightboxImg.style.transform = `translateX(${translated}px)`;
+				} else {
+					translated = 0;
+					lightboxImg.style.transform = "";
 				}
 			}
 		});

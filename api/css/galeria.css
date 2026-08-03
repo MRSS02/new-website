@@ -171,15 +171,14 @@
         max-height: 100vh;
 		height: 100vh;
         object-fit: cover; /* Garante que a imagem inteira seja visível sem distorção */
-        transition: height 0.8s ease-in, width 1.2s ease-in;
-		overflow-x: auto !important;
-		
+        transition: height 0.8s ease-in, width 1.2s ease-in, transform 0.5s ease;
 		animation: zoom2 0.16s ease-in;
     }
 	
 	img.zoom {
-		overflow-x: auto !important;
+		overflow-x: visible !important;
 		display: block !important;
+		transition: height 0.8s ease-in, width 1.2s ease-in, transform 0.5s ease-in;
     }
 
     /* Background da função de Imagem Full */
@@ -204,7 +203,6 @@
 		height: 100vh;
 		width: 200vw;
 		transform: translate(-25%, 0); 
-		overflow-x: auto !important;
     }
 
     /*Configurações para icon "X"*/
@@ -232,11 +230,12 @@
 		right: calc(52vw + 16px);
 		background: #2A2A2A6A;
 		border-radius: 52px;
-		transition: background 0.24s ease-in;
+		transition: background 0.24s ease-out, right 0.48s ease-out, transform 0.48s ease-out;
 	}
     .lightbox-close:hover {
         color: #aaaaaa;
-		transition: color 0.24s ease-in;
+		transform: scale(1.16);
+		transition: color 0.24s ease-in, transform 0.24s ease-in;
     }
 
     /*Configurações das setas para alteração de Imagem "<",">"*/
