@@ -226,6 +226,19 @@
         transition: color 0.12s ease-out;
 		padding: 0 16px;
     }
+	.lightbox-close {
+        position: fixed;
+		z-index: 100;
+        top: 20px;
+        right: 32px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: color 0.12s ease-out;
+		transition: background 0.24s ease-out, right 0.48s ease-out, transform 0.48s ease-out;
+		padding: 0 16px;
+    }
 	.lightbox-close.zoom {
 		right: calc(52vw + 16px);
 		background: #2A2A2A6A;
