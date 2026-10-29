@@ -81,7 +81,7 @@ header::before {
 	z-index: 2;
     position: fixed;
 	transition: all 0.25s ease-out !important;
-	background: linear-gradient(to bottom, #5b508db0, #c6b4fa80) !important;
+	background: linear-gradient(to bottom, #5b508db2, #c6b4fa70) !important;
     border-radius: 36px;
     
 }
