@@ -1,8 +1,8 @@
 /*
- * liquidGL - Liquid Glass - Powered by WebGPU/WebGL
+ * liquidGL – Liquid Glass - Powered by WebGPU/WebGL
  * -----------------------------------------------------------------------------
  *
- * Author: NaughtyDuk� - https://liquidgl.naughtyduk.com
+ * Author: NaughtyDuk© – https://liquidgl.naughtyduk.com
  * Licence: MIT
  * Version: v3.0.0
  */
@@ -216,7 +216,7 @@
   }
 
   /* --------------------------------------------------
-   *  Helper : Parse any CSS colour (incl. alpha)  [r,g,b] 0-1 + a
+   *  Helper : Parse any CSS colour (incl. alpha) → [r,g,b] 0–1 + a
    * ------------------------------------------------*/
   let _colorProbe = null;
   function parseTintColor(value) {
@@ -5681,7 +5681,7 @@ fn fs() -> @location(0) vec4<f32> {
       if (!backend) {
         this._backendFailed = true;
         console.warn(
-          "liquidGL: No GPU backend available - lenses will keep their original styles.",
+          "liquidGL: No GPU backend available – lenses will keep their original styles.",
         );
         return false;
       }
@@ -8752,7 +8752,7 @@ fn fs() -> @location(0) vec4<f32> {
     if (ENGINE_CHAINS[engineKey]) {
       options.engine = engineKey;
     } else {
-      console.warn(`liquidGL: Unknown engine "${engineRaw}" - using "auto".`);
+      console.warn(`liquidGL: Unknown engine "${engineRaw}" – using "auto".`);
       options.engine = "auto";
     }
 
@@ -8776,7 +8776,7 @@ fn fs() -> @location(0) vec4<f32> {
 
     if (window.__liquidGLNoWebGL__ === true || noGPU) {
       console.warn(
-        "liquidGL: WebGPU/WebGL not available - falling back to CSS backdrop-filter.",
+        "liquidGL: WebGPU/WebGL not available – falling back to CSS backdrop-filter.",
       );
       const fbTint = options.tint || [1, 1, 1, 0.07];
       const fbBackground = `rgba(${Math.round(fbTint[0] * 255)}, ${Math.round(fbTint[1] * 255)}, ${Math.round(fbTint[2] * 255)}, ${options.tint ? Math.max(fbTint[3], 0.04) : fbTint[3]})`;

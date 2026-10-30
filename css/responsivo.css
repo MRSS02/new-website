@@ -840,7 +840,7 @@
   .navbar #nav-menu-2 {
     display: flex;
     position: fixed;
-    left: -308px;
+    left: -316px;
     top: -8px;
     width: 300px;
     color: white;
@@ -858,7 +858,7 @@
 
   .navbar .navout {
     position: fixed;
-    left: -4px;
+    left: -12px;
     top: -8px;
 	opacity: 0;
     width: 1px;
@@ -881,7 +881,7 @@
     
     width: 100vw;
     top: -8px;
-    left: -4px !important;
+    left: -12px !important;
     backdrop-filter: blur(8px) contrast(0.8) brightness(0.7) saturate(1.8);
     height: 84px;
 	transition: background 0.5s cubic-bezier(0, 0.2, 0.15, 0.85);
@@ -897,7 +897,7 @@
     backdrop-filter: none;
     content: "";
     position: fixed;
-    left: -4px;
+    left: -12px;
     top: -8px;
     width: 100vw;
     height: 100vh;
@@ -933,7 +933,7 @@
   }
 
   body.mobile-menu-show .navbar .nav-menu {
-    left: -8px !important;
+    left: -12px !important;
     transition: 0.3s cubic-bezier(0, 0.2, 0.15, 0.85);
   }
 

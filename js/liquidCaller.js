@@ -6,12 +6,14 @@ let intervalId;
 
 document.addEventListener("DOMContentLoaded", () => {
     glassEffect = liquidGL({
+      engine: "auto",
 	  snapshot: "body", // The area used for refraction, <body> recommended and default
       target: ".liquidGL", // CSS selector for the element(s) to glass-ify
+      zIndex: 2,
       resolution: 1.62, // The quality of the snapshot
       refraction: 0.724, // Base refraction strength (0–1)
       bevelDepth: 0.645, // Intensity of the edge bevel (0–1)
-      bevelWidth: 0.09932, // Width of the bevel as a proportion of the element (0–1)
+      bevelWidth: 0.09928, // Width of the bevel as a proportion of the element (0–1)
       frost: 4, // Subtle blur radius in px. 0 = crystal clear
       shadow: true, // Adds a soft drop-shadow under the pane
       specular: true, // Animated light highlights (slightly more GPU)
@@ -43,6 +45,7 @@ intervalId = setInterval(() => {
     }
     liquidGL.registerDynamic(".nav-item-gl");
     liquidGL.registerDynamic(".img");
+    // liquidGL.registerDynamic("#navbar-header");
     liquidGL.syncWith();
 }, 500);
 

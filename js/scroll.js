@@ -45,10 +45,12 @@ function aparecerBarra() {
 	let navbar = document.getElementById("navbar-header");
 	let about = document.getElementById("o_evento");
 	let bgNavbar = document.getElementById("bg-navbar");
+    let aboveBG = document.querySelector(".aboveBG");
 	let logo = document.getElementById("nav-logo");
 
 	if (!about) {
 		bgNavbar.classList.add("navbar-scrolled");
+        aboveBG.classList.add("navbar-scrolled");
 		navbar.classList.add("navbar-scrolled");
 		logo.classList.remove("hidden");
 		logo.classList.add("not-hidden");
@@ -63,6 +65,7 @@ function aparecerBarra() {
 
     if (scrollPosition > threshold0) {
 		bgNavbar.classList.add("navbar-scrolled");
+        aboveBG.classList.add("navbar-scrolled");
 		navbar.classList.add("navbar-scrolled");
 		logo.classList.remove("hidden");
 		logo.classList.add("not-hidden"); 
@@ -76,6 +79,7 @@ function aparecerBarra() {
     } else {
 		bgNavbar.classList.remove("navbar-color");
 		bgNavbar.classList.remove("navbar-scrolled");
+        aboveBG.classList.remove("navbar-scrolled");
 		navbar.classList.remove("navbar-color");
 		navbar.classList.remove("navbar-scrolled");
 		logo.classList.remove("not-hidden");
@@ -84,10 +88,10 @@ function aparecerBarra() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-	aparecerBarra();
+	setTimeout(aparecerBarra, 500);
 });
 
 document.addEventListener("scroll", () => {
-	aparecerBarra();
+	setTimeout(aparecerBarra, 500);
 });
 
