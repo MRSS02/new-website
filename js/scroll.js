@@ -40,6 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+function aparecerLogo() {
+    let logo = document.getElementById("nav-logo");
+    logo.classList.remove("hidden");
+	logo.classList.add("not-hidden");
+
+}
+
 function aparecerBarra() {
 	let scrollPosition = window.scrollY;
 	let navbar = document.getElementById("navbar-header");
@@ -52,11 +59,10 @@ function aparecerBarra() {
 		bgNavbar.classList.add("navbar-scrolled");
         aboveBG.classList.add("navbar-scrolled");
 		navbar.classList.add("navbar-scrolled");
-		logo.classList.remove("hidden");
-		logo.classList.add("not-hidden");
 		bgNavbar.classList.add("navbar-color");
 		navbar.classList.add("navbar-color");
-		return; 
+		setTimeout(aparecerLogo, 300);
+        return; 
 	}
 
     // Dinamicamente altera o background do cabeçalho quando há scroll;
@@ -67,8 +73,7 @@ function aparecerBarra() {
 		bgNavbar.classList.add("navbar-scrolled");
         aboveBG.classList.add("navbar-scrolled");
 		navbar.classList.add("navbar-scrolled");
-		logo.classList.remove("hidden");
-		logo.classList.add("not-hidden"); 
+        setTimeout(aparecerLogo, 300);
 		if (scrollPosition > threshold1) {
 			bgNavbar.classList.add("navbar-color");
 			navbar.classList.add("navbar-color");
@@ -88,10 +93,10 @@ function aparecerBarra() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-	setTimeout(aparecerBarra, 500);
+	setTimeout(aparecerBarra, 250);
 });
 
 document.addEventListener("scroll", () => {
-	setTimeout(aparecerBarra, 500);
+	setTimeout(aparecerBarra, 250);
 });
 

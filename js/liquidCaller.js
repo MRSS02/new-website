@@ -11,16 +11,17 @@ document.addEventListener("DOMContentLoaded", () => {
       target: ".liquidGL", // CSS selector for the element(s) to glass-ify
       zIndex: 2,
       resolution: 1.62, // The quality of the snapshot
-      refraction: 0.724, // Base refraction strength (0–1)
-      bevelDepth: 0.645, // Intensity of the edge bevel (0–1)
-      bevelWidth: 0.09928, // Width of the bevel as a proportion of the element (0–1)
-      frost: 4, // Subtle blur radius in px. 0 = crystal clear
+      refraction: 0.0624, // Base refraction strength (0–1)
+      bevelDepth: 0.0882425, // Intensity of the edge bevel (0–1)
+      bevelWidth: 0.128628, // Width of the bevel as a proportion of the element (0–1)
+      aberration: 0.025,
+      frost: 2, // Subtle blur radius in px. 0 = crystal clear
       shadow: true, // Adds a soft drop-shadow under the pane
       specular: true, // Animated light highlights (slightly more GPU)
       reveal: "fade", // Reveal animation
       tilt: false, // Whether tilt on hover is enabled
       tiltFactor: 5, // If tilt is enabled, how much tilt
-      magnify: 1.018124, // Magnification of lens content
+      magnify: 1.018125, // Magnification of lens content
       on: {
         init(instance) {
           // The `init` callback fires once liquidGL has taken its snapshot
@@ -43,23 +44,25 @@ intervalId = setInterval(() => {
         clearInterval(intervalId);
         return;
     }
-    liquidGL.registerDynamic(".nav-item-gl");
+    //liquidGL.registerDynamic(".nav-item-gl");
     liquidGL.registerDynamic(".img");
-    // liquidGL.registerDynamic("#navbar-header");
+    //liquidGL.registerDynamic("#navbar-header");
     liquidGL.syncWith();
 }, 500);
 
 
 function syncLiquid() {
+    document.getElementById("nav-logo").classList.add("hidden");
     if (resizeTimeout) {
         return;
     }
     resizeTimeout = true;
     let myTimeout = setTimeout(() => {
-        liquidGL.registerDynamic(".img");
+        document.getElementById("nav-logo").classList.remove("hidden");
+        // liquidGL.registerDynamic("#nav-menu");
         liquidGL.syncWith();
         resizeTimeout = false;
-    }, 250);
+    }, 220);
 }
 
 window.addEventListener("resize", syncLiquid);
