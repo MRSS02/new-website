@@ -11,11 +11,10 @@
     
     <!-- Sessão da Galeria -->
     <?php include __DIR__ . '/snippets/galeria.html'; ?>
-
     <!-- Footer -->
     <?php include __DIR__ . '/snippets/rodape.html'; ?>
 
     <!-- Chamada dos Scripts -->
-    <?php include __DIR__ . '/snippets/scripts.html'; ?>
+    <?php include __DIR__ . '/snippets/scripts-galeria.html'; ?>
 </body>
 </html>
