@@ -10,7 +10,7 @@
     <?php include __DIR__ . '/snippets/navegacao-galeria.html'; ?>
     
     <!-- Sessão da Galeria -->
-    <?php include __DIR__ . '/snippets/galeria.html'; ?>
+    <?php include __DIR__ . '/snippets/galeria.php'; ?>
     <!-- Footer -->
     <?php include __DIR__ . '/snippets/rodape.html'; ?>
 
