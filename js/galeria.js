@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		
         //Duplo clique desktop
 		lightbox.addEventListener('dblclick', (event) => {
-            if (mobileCheck) zoomLightboxImage(event);
+            if (!mobileCheck) zoomLightboxImage(event);
         });
 		
 		// Duplo clique mobile
