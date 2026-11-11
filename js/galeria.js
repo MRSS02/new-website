@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let imageWidth = lightboxImg.scrollWidth;
         let aspect = window.screen.width / window.screen.height
         console.log(aspect);
-        if (aspect > 1.77) {
+        if (aspect > 1.77777) {
                         translated = 0;
         } else if (aspect >= 1.6) {
                         if (translated > imageWidth / 12) translated = imageWidth / 12;
@@ -28,36 +28,51 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (aspect >= 1.34) {
                         if (translated > imageWidth / 8) translated = imageWidth / 8;
                         else if (translated < -imageWidth / 8) translated = -imageWidth / 8;
+        } else if (aspect >= 1.25) {
+                        if (translated > imageWidth / 7) translated = imageWidth / 7;
+                        else if (translated < -imageWidth / 7) translated = -imageWidth / 7;
         } else if (aspect >= 1.2) {
                         if (translated > imageWidth / 6) translated = imageWidth / 6;
                         else if (translated < -imageWidth / 6) translated = -imageWidth / 6;
-        } else if (aspect >= 1) {
+        } else if (aspect >= 1.08) {
                         if (translated > imageWidth / 5) translated = imageWidth / 5;
                         else if (translated < -imageWidth / 5) translated = -imageWidth / 5;
+        } else if (aspect >= 1) {
+                        if (translated > imageWidth / 4.5) translated = imageWidth / 4.5;
+                        else if (translated < -imageWidth / 4.5) translated = -imageWidth / 4.5;
         } else if (aspect >= 0.9) {
                         if (translated > imageWidth / 4) translated = imageWidth / 4;
                         else if (translated < -imageWidth / 4) translated = -imageWidth / 4;
-        } else if (aspect >= 0.8) {
+        } else if (aspect >= 0.78) {
                         if (translated > imageWidth / 3.5) translated = imageWidth / 3.5;
                         else if (translated < -imageWidth / 3.5) translated = -imageWidth / 3.5;
         } else if (aspect >= 0.68) {
                         if (translated > imageWidth / 3.2) translated = imageWidth / 3.2;
                         else if (translated < -imageWidth / 3.2) translated = -imageWidth / 3.2;
-        } else if (aspect >= 0.58) {
+        } else if (aspect >= 0.5) {
                         if (translated > imageWidth / 2.6) translated = imageWidth / 2.6;
                         else if (translated < -imageWidth / 2.6) translated = -imageWidth / 2.6;
-        } else if (aspect >= 0.52) {
+        } else if (aspect >= 0.44) {
                         if (translated > imageWidth / 2.5) translated = imageWidth / 2.5;
                         else if (translated < -imageWidth / 2.5) translated = -imageWidth / 2.5;
-        } else if (aspect >= 0.5) {
+        } else if (aspect >= 0.42) {
                         if (translated > imageWidth / 2.4) translated = imageWidth / 2.4;
                         else if (translated < -imageWidth / 2.4) translated = -imageWidth / 2.4;
-        } else if (aspect >= 0.48) {
+        } else if (aspect >= 0.41) {
                         if (translated > imageWidth / 2.35) translated = imageWidth / 2.35;
                         else if (translated < -imageWidth / 2.35) translated = -imageWidth / 2.35;
+        } else if (aspect >= 0.4) {
+                        if (translated > imageWidth / 2.3) translated = imageWidth / 2.3;
+                        else if (translated < -imageWidth / 2.3) translated = -imageWidth / 2.3;
+        } else if (aspect >= 0.38) {
+                        if (translated > imageWidth / 2.25) translated = imageWidth / 2.25;
+                        else if (translated < -imageWidth / 2.25) translated = -imageWidth / 2.25;
+         } else if (aspect >= 0.36) {
+                        if (translated > imageWidth / 2.22) translated = imageWidth / 2.22;
+                        else if (translated < -imageWidth / 2.22) translated = -imageWidth / 2.22;
         } else {
-                        if (translated > imageWidth / 2.28) translated = imageWidth / 2.28;
-                        else if (translated < -imageWidth / 2.28) translated = -imageWidth / 2.28;
+                        if (translated > imageWidth / 2.15) translated = imageWidth / 2.15;
+                        else if (translated < -imageWidth / 2.15) translated = -imageWidth / 2.15;
         }
     }
 
